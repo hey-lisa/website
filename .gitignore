@@ -1,0 +1,8 @@
+# Ignore roadmap file (private notes)
+roadmap.md
+
+# Standard Next.js ignores (if not present)
+node_modules
+.env
+.next
+out
