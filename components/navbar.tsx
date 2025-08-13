@@ -6,7 +6,7 @@ import Anchor from "./anchor";
 import { SheetLeftbar } from "./leftbar";
 import { page_routes } from "@/lib/routes-config";
 import { SheetClose } from "@/components/ui/sheet";
-import AlgoliaSearch from "./algolia-search";
+// Search removed
 
 export const NAVLINKS = [
   {
@@ -53,8 +53,7 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center sm:justify-normal justify-between sm:gap-3 ml-1 sm:w-fit w-[90%]">
-          <AlgoliaSearch {...algolia_props} />
+        <div className="flex items-center sm:justify-end justify-end sm:gap-2 ml-1 sm:w-fit w-auto">
           <div className="flex items-center justify-between sm:gap-2">
             <div className="flex ml-4 sm:ml-0">
               <Link
