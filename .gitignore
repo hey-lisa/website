@@ -16,3 +16,6 @@ dist
 coverage
 *.log
 
+# local sources (do not commit)
+.aria-src/
+
