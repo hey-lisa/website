@@ -1,0 +1,16 @@
+# Hey LiSA - AI Web3 Agent
+# https://hey-lisa.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hey-lisa.com/sitemap.xml
+
+# Optional: Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block any sensitive or private areas if needed in the future
+# Disallow: /admin/
+# Disallow: /api/private/
+

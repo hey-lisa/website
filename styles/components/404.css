@@ -1,0 +1,151 @@
+/* ================================================
+   404 Error Page Styles
+   ================================================
+   
+   Glitch effects and styling for 404 error page
+   ================================================ */
+
+.error-404 {
+  position: relative;
+  font-size: 4rem;
+  font-weight: bold;
+    color: var(--lisa-green);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (min-width: 640px) {
+  .error-404 {
+    font-size: 5rem;
+  }
+}
+
+/* Main glitch animation */
+.error-404::before,
+.error-404::after {
+  content: "404";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.error-404::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ef4444;
+  z-index: -1;
+}
+
+.error-404::after {
+  animation: glitch-2 0.5s infinite;
+  color: #3b82f6;
+  z-index: -2;
+}
+
+/* Glitch keyframes */
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% {
+    transform: translate(0);
+  }
+  1%, 13% {
+    transform: translate(-2px, 2px);
+  }
+  16%, 48% {
+    transform: translate(2px, -2px);
+  }
+  51%, 98% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 20%, 21%, 62%, 63%, 99%, 100% {
+    transform: translate(0);
+  }
+  2%, 19% {
+    transform: translate(2px, -1px);
+  }
+  22%, 61% {
+    transform: translate(-2px, 2px);
+  }
+  64%, 98% {
+    transform: translate(1px, -2px);
+  }
+}
+
+/* Subtle glow effect */
+.error-404 {
+  text-shadow: 
+    0 0 5px var(--lisa-green),
+    0 0 10px var(--lisa-green),
+    0 0 15px var(--lisa-green);
+}
+
+/* Scanline effect overlay */
+.error-404-container {
+  position: relative;
+}
+
+.error-404-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 98%,
+    var(--lisa-green-glow) 100%
+  );
+  animation: scanline 2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanline {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Hover effect */
+.error-404-container:hover .error-404 {
+  animation: glitch-intense 0.2s infinite;
+}
+
+@keyframes glitch-intense {
+  0%, 100% {
+    transform: translate(0);
+  }
+  10% {
+    transform: translate(-3px, 3px);
+  }
+  20% {
+    transform: translate(3px, -3px);
+  }
+  30% {
+    transform: translate(-2px, -2px);
+  }
+  40% {
+    transform: translate(2px, 2px);
+  }
+  50% {
+    transform: translate(-3px, -3px);
+  }
+  60% {
+    transform: translate(3px, 3px);
+  }
+  70% {
+    transform: translate(-1px, 1px);
+  }
+  80% {
+    transform: translate(1px, -1px);
+  }
+  90% {
+    transform: translate(-2px, 2px);
+  }
+}

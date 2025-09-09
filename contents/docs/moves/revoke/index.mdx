@@ -1,0 +1,40 @@
+---
+title: Revoke
+description: Remove token approvals
+---
+
+ 
+### Purpose
+- Remove existing token approvals to reduce risk.
+- Use for cleanup after trying apps or when tightening a wallet.
+
+### Say
+- revoke all approvals on Arbitrum
+- show approvals on Ethereum
+- revoke USDC approvals on Base
+- revoke everything except Uniswap
+
+### Scan and preview
+- LiSA scans supported chains for approvals on your linked addresses.
+- LiSA shows a list for review and lets you filter by chain, asset, or spender.
+- You can remove items before proceeding.
+
+### Prepare and queue
+- LiSA prepares the revoke transactions and places them in the queue
+- Items on the same chain may be bundled
+- See Transaction queue for signing flow specifics
+
+### Fees
+- You pay gas for each revoke.
+
+### Safety
+- Revoking does not move funds.
+- If an approval is needed later, LiSA requests it at that time.
+- LiSA warns if a planned revoke would break an active strategy.
+
+### Sign and verify
+- Your wallet opens with the revoke transaction.
+- After signing, you see status in the queue and an explorer link.
+
+
+

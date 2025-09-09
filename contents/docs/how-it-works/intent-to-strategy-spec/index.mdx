@@ -1,0 +1,21 @@
+---
+title: Intent to strategy spec
+description: Chat to sealed spec
+---
+
+<IntentToStrategyDiagram />
+
+### Flow
+- User and LiSA refine the strategy in chat, logic, markets, cadence, sizing, risk hints.
+- A specialized strategy agent, fed with the grammar and available tools, compiles the description into a deterministic JSON spec.
+- The spec encodes an execution graph and expressions that the engine can evaluate without ambiguity.
+- The spec is sealed and versioned by a content hash. The executable stays private by default.
+- When starting a run the path is chosen, Hyperliquid by API or on-chain including GMX and vaults.
+
+### Key pieces
+- Strategy compiler with a domain grammar.
+- Sealed JSON spec and versioning by hash.
+- Run configuration that binds the spec to an execution path.
+
+
+

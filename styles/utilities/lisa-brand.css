@@ -1,0 +1,52 @@
+/* ================================================
+   Lisa Brand Utility Classes
+   ================================================
+   Brand-specific utility classes and effects
+   Depends on: variables.css for --lisa-green-* variables
+   ================================================ */
+
+/* === CONSISTENT LINK STYLING === */
+.lisa-link {
+  font-family: var(--font-mono);
+  color: var(--lisa-green);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+  filter: drop-shadow(0 0 6px var(--lisa-green-glow));
+}
+
+.lisa-link:hover {
+  color: #fff;
+}
+
+/* === PROSE LINK STYLING === */
+.lisa-prose a {
+  font-family: var(--font-mono) !important;
+  color: var(--lisa-green) !important;
+  text-decoration: underline !important;
+  text-decoration-style: dotted !important;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+  filter: drop-shadow(0 0 6px var(--lisa-green-glow));
+}
+
+.lisa-prose a:hover {
+  color: #fff !important;
+}
+
+/* Blog card hover effect - glowing green border */
+@keyframes blog-card-pulse {
+  0%, 100% {
+    border-color: var(--lisa-green-subtle);
+    box-shadow: 0 0 8px var(--lisa-green-glow), 0 0 16px var(--lisa-green-glow);
+  }
+  50% {
+    border-color: var(--lisa-green-dim);
+    box-shadow: 0 0 16px var(--lisa-green-subtle), 0 0 32px var(--lisa-green-glow);
+  }
+}
+
+.blog-card-hover:hover {
+  animation: blog-card-pulse 1.5s ease-in-out infinite;
+}

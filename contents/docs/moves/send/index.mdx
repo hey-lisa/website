@@ -1,0 +1,38 @@
+---
+title: Send
+description: Transfer assets to another address
+---
+
+ 
+### Purpose
+- Transfer tokens to another address on a chosen chain.
+- Use for payments or moving assets between your own wallets.
+
+### Say
+- send 0.5 ETH on Arbitrum to 0xABCD…
+- send all my USDC on Base to 0xABCD…
+
+### LiSA extracts
+- Token, chain, amount, and recipient address.
+- Basic recipient checks.
+
+### Recipient policy
+- Open: send to any address.
+- Restricted: send only to linked addresses and recipients on your whitelist.
+- Link an address by connecting that wallet and signing a one time proof.
+- You can switch the policy in Accounts and assets at any time.
+
+### Fees
+- Only gas is paid for a send.
+- There are no DEX or bridge fees.
+
+### Sign and verify
+- Your wallet opens with the transfer.
+- After signing, you see status in the queue and an explorer link.
+
+### Safety
+- LiSA never holds funds or keys. She only prepares the transfer you sign.
+
+
+
+

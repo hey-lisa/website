@@ -1,0 +1,41 @@
+/* CSS Variables & Brand Colors */
+
+:root {
+  font-variant-ligatures: none;
+}
+
+/* Brand colors */
+:root {
+  --bg: #0B0B0B;
+  --fg: #E6E6E6;
+  --line: #1A1A1A;
+  --accent: #F79AAF;
+  
+  /* Consistent green system - based on 404/footer green */
+  --lisa-green: rgba(167,243,208,.9);
+  --lisa-green-dim: rgba(167,243,208,.6);  
+  --lisa-green-subtle: rgba(167,243,208,.3);
+  --lisa-green-glow: rgba(167,243,208,.15);
+}
+
+/* Tailwind variables */
+:root {
+  --background: 240 10% 3.90%;
+  --foreground: 0 0% 98%;
+  --primary: 0 0% 98%;
+  --primary-foreground: 240 5.90% 10%;
+  --secondary: 240 3.70% 15.90%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 240 3.70% 15.90%;
+  --muted-foreground: 240 5% 64.90%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.80% 30.60%;
+  --destructive-foreground: 0 85.70% 97.30%;
+  --border: 240 3.70% 15.90%;
+  --input: 240 3.70% 15.90%;
+  --ring: 240 4.90% 83.90%;
+  --radius: 0.625rem;
+  
+  /* Fonts */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}

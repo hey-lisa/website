@@ -1,0 +1,18 @@
+---
+title: Trading engine
+description: Execute specs against live data
+---
+
+<StrategyExecutionDiagram />
+
+### Model
+- Deterministic evaluation on a fixed tick, hourly by default.
+- Reads market candles from the internal oracle and data plane.
+- Emits actions to the selected adapter and records fills, positions, and PnL.
+
+### Adapters
+- Hyperliquid adapter places and monitors orders through the user account API.
+- On-chain adapter composes calls for swaps and position changes, including GMX and vault flows.
+
+
+

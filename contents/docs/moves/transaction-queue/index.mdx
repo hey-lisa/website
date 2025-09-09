@@ -1,0 +1,27 @@
+---
+title: Transaction queue
+description: Review and sign prepared transactions
+---
+
+Every ask in LiSA is translated into concrete moves (swap, bridge, send, revoke), which resolve into the exact on-chain transactions required to fulfill it. Those transactions must run in a safe, deliberate order. The transaction queue is where they line up for your review and signature, turning intent into execution one confirmed step at a time.
+
+### What it is
+- A visible ordered list of unsigned transactions prepared from your request
+- One intent can produce one transaction or a chain of dependent steps
+
+### How it works
+- LiSA sequences all required steps and places them in the queue
+- You review and sign each item in order; nothing executes without a signature
+- Steps on the same chain may be bundled when safe to reduce clicks
+
+### Signatures and custody
+- All transactions are unsigned until your wallet prompts you to sign on your device
+- All signatures happen client side in your wallet
+- No signature, no submission. No funds move without your approval
+
+### After submission
+- The next item becomes ready only after the previous one confirms on-chain
+- You get explorer links and status updates for each submitted transaction
+- If you stop signing, nothing else runs
+
+

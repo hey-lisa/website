@@ -1,0 +1,22 @@
+/* Contact page styles */
+
+.pgp-copy-button {
+  padding: 0.5rem;
+  color: var(--fg);
+  transition: color 0.2s ease-in-out;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pgp-copy-button:hover {
+  color: var(--lisa-green);
+  filter: drop-shadow(0 0 8px var(--lisa-green-glow));
+}
+
+.pgp-copy-button:active {
+  transform: scale(0.95);
+}

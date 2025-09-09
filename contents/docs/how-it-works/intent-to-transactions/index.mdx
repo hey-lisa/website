@@ -1,0 +1,24 @@
+---
+title: Intent to transactions
+description: Chat to wallet signed transactions
+---
+
+<TransactionFlowDiagram />
+
+### Flow
+- User asks in chat.
+- Backend normalizes the sentence into intent, actions, tokens, chains, amounts, recipients.
+- Verifications run, address format, recipient policy, linked addresses, basic token checks.
+- A specialized move agent selects a route through a routing provider, for example LiFi, and prepares concrete calls.
+- The planner orders steps and adds confirm gates so dependent steps wait for prior confirmations.
+- The queue builder turns steps into unsigned transactions and returns them to the client for wallet signatures.
+- After each signature the submitter sends the transaction and tracks confirmation.
+
+### Key pieces
+- Intent parser and planner.
+- Route adapter to external aggregators.
+- Queue builder and submitter.
+- Lightweight status stream back to the client.
+
+
+

@@ -1,0 +1,46 @@
+/* Tailwind imports and base styles */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Brand utilities */
+  .lisa-primary { color: var(--lisa-green); }
+  .lisa-accent { color: var(--accent); }
+  .glow-green { text-shadow: 0 0 6px var(--lisa-green-dim); }
+  .glow-accent { text-shadow: 0 0 6px rgba(247,154,175,.45); }
+
+  body { background: var(--bg); color: var(--fg); }
+  hr, .border-t, .border-b { border-color: var(--line) !important; }
+  a { color: var(--fg); }
+  a:hover { color: var(--lisa-green); text-shadow: 0 0 6px var(--lisa-green-dim); }
+  .lisa-heart { 
+    color: #ff6fa5; 
+    text-shadow: 0 0 10px rgba(247,154,175,.6), 0 0 4px rgba(247,154,175,.5); 
+    animation: lisa-heart 1.6s ease-in-out infinite; 
+    font-size: 16px; 
+    line-height: 1; 
+    display: inline-block; 
+    vertical-align: -2px; 
+  }
+}
+
+/* Animations */
+@keyframes lisa-heart { 
+  0%, 100% { transform: scale(1); filter: saturate(1); } 
+  40% { transform: scale(1.12); filter: saturate(1.2); } 
+  60% { transform: scale(1.06); filter: saturate(1.1); } 
+}
+
+.prose {
+  margin: 0 !important;
+}

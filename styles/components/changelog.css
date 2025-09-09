@@ -1,0 +1,73 @@
+/* Changelog styles */
+
+.release-block { margin: 16px 0 22px 0; }
+.release-header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.release-label-square {
+  display: inline-block;
+  padding: 3px 12px;
+  font-size: 11.5px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  color: #cfeecf;
+  border: 1px dashed rgba(63,63,70,.65);
+  background: rgba(24,24,27,.45);
+  border-radius: 6px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  text-shadow: 0 0 6px var(--lisa-green-glow);
+  box-shadow: 0 0 12px rgba(16,185,129,.06);
+}
+.release-date-paren { font-size: 12px; color: #cfeecf; opacity: .85; margin-left: 4px; }
+.release-title { margin-left: 4px; font-weight: 800; letter-spacing: .2px; color: #e6ffe6; text-shadow: 0 0 6px var(--lisa-green-glow); }
+.release-body { margin-top: 6px; }
+
+/* Subrelease (Version) */
+.version-block { margin: 6px 0 10px 0; }
+.version-head { display: grid; grid-template-columns: 84px 1fr; align-items: baseline; column-gap: 8px; opacity: .9 }
+.version-num { justify-self: end; display: inline-block; font-size: 12px; color: #a6f3aa; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; padding: 0 2px 1px 2px; border-bottom: 1px dashed rgba(63,63,70,.65); text-shadow: 0 0 4px var(--lisa-green-glow); }
+.version-title { font-weight: 600; color: #dfffe0; letter-spacing: .1px; }
+.version-body { margin-top: 2px; }
+
+/* Changelog list styling without explicit labels */
+.chg-list { margin: 2px 0 4px 0; padding-left: 16px; }
+/* added: use + marker color and symbol */
+.chg-list.cat-added li::marker { content: "+ "; color: var(--lisa-green-subtle); font-weight: 500; }
+/* changed: keep standard bullet but tint */
+.chg-list.cat-changed li::marker { color: rgba(88,166,255,.38) }
+/* fixed: use triangle marker and inline prefix */
+.chg-list.cat-fixed li::marker { content: "▸ "; color: rgba(255,184,107,.45) }
+.chg-list.cat-fixed li::before { content: "fixed: "; color: rgba(212,212,216,.92); font-weight: 600; margin-right: 2px; }
+.chg-list.cat-fixed li { position: relative; }
+
+/* bump specificity inside prose wrapper */
+.prose .chg-list.cat-added li::marker { content: "+ "; color: var(--lisa-green-subtle); font-weight: 500; }
+.prose .chg-list.cat-changed li::marker { color: rgba(88,166,255,.38) }
+.prose .chg-list.cat-fixed li::marker { content: "▸ "; color: rgba(255,184,107,.45) }
+.prose .chg-list.cat-fixed li::before { content: "fixed: "; color: rgba(212,212,216,.92); font-weight: 600; margin-right: 2px; }
+
+/* Changelog notice (intro) */
+.chg-notice { display: block; text-align: center; font-size: 13px; line-height: 1.5; color: rgba(212,212,216,.9); margin: 36px 0 48px 0; padding: 24px 28px; border: 1px dashed rgba(63,63,70,.65); background: rgba(24,24,27,.45); border-radius: 6px; box-shadow: 0 10px 22px -12px rgba(16,185,129,.18), 0 0 24px 10px rgba(16,185,129,.08); }
+.chg-notice::before { content: none; display: none; }
+.chg-notice a { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; color: var(--lisa-green); text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 2px; transition: color .2s ease; filter: drop-shadow(0 0 6px var(--lisa-green-subtle)); }
+.chg-notice a:hover { color: #fff }
+
+/* bump specificity inside prose wrapper */
+.prose .chg-notice { display: block; text-align: center; font-size: 13px; line-height: 1.5; color: rgba(212,212,216,.9); margin: 36px 0 48px 0; padding: 24px 28px; border: 1px dashed rgba(63,63,70,.65); background: rgba(24,24,27,.45); border-radius: 6px; box-shadow: 0 10px 22px -12px rgba(16,185,129,.18), 0 0 24px 10px rgba(16,185,129,.08); }
+.prose .chg-notice a { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; color: var(--lisa-green) !important; text-decoration: underline !important; text-decoration-style: dotted !important; text-underline-offset: 2px; transition: color .2s ease; filter: drop-shadow(0 0 6px var(--lisa-green-subtle)); }
+.prose .chg-notice a:hover { color: #fff !important }
+
+/* Subversion labels: familiar underline style (lighter than notice) */
+.prose .version-num {
+  justify-self: end;
+  display: inline-block;
+  padding: 0 2px 1px 2px;
+  border-bottom: 1px dashed rgba(63,63,70,.65);
+  text-shadow: 0 0 4px var(--lisa-green-glow);
+}
+
+.version-head .version-num {
+  justify-self: end;
+  display: inline-block;
+  padding: 0 2px 1px 2px;
+  border-bottom: 1px dashed rgba(63,63,70,.65);
+  text-shadow: 0 0 4px var(--lisa-green-glow);
+}
