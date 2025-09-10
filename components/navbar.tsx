@@ -27,9 +27,13 @@ export const NAVLINKS = [
 export function Navbar() {
   return (
     <nav className="w-full border-b h-16 sticky top-0 z-50 bg-background">
-      <div className="sm:container mx-auto w-[95vw] h-full flex items-center sm:justify-between md:gap-2">
+      <div className="sm:container mx-auto w-[95vw] h-full flex items-center justify-between md:gap-2">
         <div className="flex items-center sm:gap-5 gap-2.5">
           <SheetLeftbar />
+          {/* Logo visible on all screen sizes, but positioned differently */}
+          <Link href="/" className="md:hidden flex navbar-logo group">
+            <LisaLogo />
+          </Link>
           <div className="flex items-center gap-6">
             <Link href="/" className="md:flex hidden navbar-logo group">
               <LisaLogo />
@@ -40,40 +44,35 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="flex items-center sm:justify-end justify-end sm:gap-2 ml-1 sm:w-fit w-auto">
-          <div className="flex items-center justify-between sm:gap-2">
-            <div className="flex ml-4 sm:ml-0">
-              <Link
-                href="https://github.com/hey-lisa"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
-              <Link
-                href="https://x.com/HeyLisaAi"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-              >
-                <TwitterIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
-              <Link
-                href="/contact"
-                className={buttonVariants({
-                  variant: "ghost",
-                  size: "icon",
-                })}
-                title="Secure Contact"
-              >
-                <MailIcon className="h-[1.1rem] w-[1.1rem]" />
-              </Link>
-
-            </div>
-          </div>
+        <div className="flex items-center">
+          <Link
+            href="https://github.com/hey-lisa"
+            className={`${buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })} hover:!text-[var(--lisa-green)] hover:![text-shadow:0_0_6px_var(--lisa-green-dim)]`}
+          >
+            <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
+          </Link>
+          <Link
+            href="https://x.com/HeyLisaAi"
+            className={`${buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })} hover:!text-[var(--lisa-green)] hover:![text-shadow:0_0_6px_var(--lisa-green-dim)]`}
+          >
+            <TwitterIcon className="h-[1.1rem] w-[1.1rem]" />
+          </Link>
+          <Link
+            href="/contact"
+            className={`${buttonVariants({
+              variant: "ghost",
+              size: "icon",
+            })} hover:!text-[var(--lisa-green)] hover:![text-shadow:0_0_6px_var(--lisa-green-dim)]`}
+            title="Secure Contact"
+          >
+            <MailIcon className="h-[1.1rem] w-[1.1rem]" />
+          </Link>
         </div>
       </div>
     </nav>

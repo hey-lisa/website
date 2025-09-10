@@ -102,7 +102,7 @@ export default async function DocsPage(props: PageProps) {
             <div className="chg-notice">
               <div>
                 LiSA is in pre‑alpha stage (
-                <Link href="/docs/changelog" target="_blank" rel="noopener noreferrer">0.5</Link>
+                <Link href="/docs/changelog/lisa" target="_blank" rel="noopener noreferrer">0.5</Link>
                 ).
                 <br />
                 We&apos;re actively building and testing. Features are subject to change.

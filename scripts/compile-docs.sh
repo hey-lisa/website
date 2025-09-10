@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Compile website docs into a single markdown file in nav order.
+# Compile website docs into a single markdown file in nav order for internal documentation.
 # Usage: bash scripts/compile-docs.sh [OUTPUT_FILE]
 
 ROOT_DIR="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
 DOCS_ROOT="$ROOT_DIR/contents/docs"
 ROUTES_FILE="$ROOT_DIR/lib/routes-config.ts"
-OUTFILE="${1:-$ROOT_DIR/LISA_DOCS_COMPILED.md}"
+INTERNAL_DOCS_DIR="$ROOT_DIR/internal-docs"
+OUTFILE="${1:-$INTERNAL_DOCS_DIR/COMPILED_DOCS.md}"
+
+# Ensure internal-docs directory exists
+mkdir -p "$INTERNAL_DOCS_DIR"
 
 if [[ ! -f "$ROUTES_FILE" ]]; then
   echo "Cannot find $ROUTES_FILE" >&2
@@ -90,6 +94,17 @@ function readMdxExact(filePath) {
 }
 
 const out = [];
+
+// Add file header with metadata
+const now = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
+out.push('# Complete LiSA Documentation');
+out.push('');
+out.push(`*Auto-compiled from contents/docs/ on ${now}*`);
+out.push('*This file contains all website documentation in navigation order*');
+out.push('');
+out.push('---');
+out.push('');
+
 for (const sec of sections) {
   // Add section header
   out.push(`# ${sec.title}`, '');

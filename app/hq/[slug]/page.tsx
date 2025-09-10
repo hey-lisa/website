@@ -195,7 +195,8 @@ export default async function HQPage(props: PageProps) {
             alt="cover"
             width={700}
             height={400}
-            className="w-full h-[400px] rounded-md border object-cover"
+            className="w-full max-w-full rounded-md border object-contain bg-muted/30"
+            style={{ height: 'auto' }}
           />
         </div>
         <Typography>{res.content}</Typography>

@@ -42,13 +42,19 @@ function CopyButton({ text }: { text: string }) {
   return (
     <button
       onClick={handleCopy}
-      className="pgp-copy-button"
-      title={copied ? 'Copied!' : 'Copy PGP key'}
+      className="flex items-center space-x-2 rounded-md border bg-transparent px-3 py-2 text-sm transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+      title={copied ? 'PGP key copied!' : 'Copy PGP key'}
     >
       {copied ? (
-        <CheckIcon className="h-4 w-4" />
+        <>
+          <CheckIcon className="h-4 w-4 text-green-500" />
+          <span>Copied!</span>
+        </>
       ) : (
-        <CopyIcon className="h-4 w-4" />
+        <>
+          <CopyIcon className="h-4 w-4" />
+          <span>Copy PGP Key</span>
+        </>
       )}
     </button>
   );

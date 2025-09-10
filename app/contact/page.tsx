@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 // Function to read PGP key from public file
 async function getPGPKey(): Promise<string> {
   try {
-    const filePath = path.join(process.cwd(), 'public', 'pgp-public-key.txt');
+    const filePath = path.join(process.cwd(), 'public', 'pgp-key.asc');
     const pgpKey = await readFile(filePath, 'utf-8');
     return pgpKey;
   } catch (error) {

@@ -454,7 +454,7 @@ export default function LabClient() {
             
             <div className="modal-paragraph">
               LiSA is currently in closed alpha development. Access is limited while we refine core features.
-              Check our <a href="/docs" target="_blank">documentation</a>, <a href="/docs/changelog" target="_blank">changelog</a>, 
+              Check our <a href="/docs" target="_blank">documentation</a>, <a href="/docs/changelog/lisa" target="_blank">changelog</a>, 
               and <a href="/docs/roadmap" target="_blank">roadmap</a> for updates.
               Leave your email below to follow future developments.
             </div>
