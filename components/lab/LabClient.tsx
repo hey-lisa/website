@@ -122,7 +122,15 @@ export default function LabClient() {
   }, [isClosing]);
 
   useEffect(() => {
-    if (!showSoon) return;
+    if (!showSoon) {
+      // Re-enable body scroll when modal is closed
+      document.body.style.overflow = '';
+      return;
+    }
+    
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+    
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.preventDefault();
@@ -130,7 +138,11 @@ export default function LabClient() {
       }
     };
     window.addEventListener("keydown", onKeyDown);
-    return () => window.removeEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      // Re-enable body scroll when component unmounts
+      document.body.style.overflow = '';
+    };
   }, [showSoon, closeSoonModal]);
 
   const openSoonModal = () => {
