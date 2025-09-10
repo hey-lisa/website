@@ -44,3 +44,13 @@
 .prose {
   margin: 0 !important;
 }
+
+/* Terminal cursor blink animation */
+.blink {
+  animation: blink 1.2s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
