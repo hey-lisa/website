@@ -2,10 +2,10 @@ import Image from "next/image";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[87vh] flex items-center justify-center px-4">
+    <div className="min-h-[87vh] flex items-center justify-center px-0 md:px-4">
       
       {/* Image with overlaid 404 */}
-      <div className="relative w-full max-w-4xl">
+      <div className="relative w-full max-w-none md:max-w-4xl overflow-hidden">
         <Image
           src="/404.webp"
           alt="404"

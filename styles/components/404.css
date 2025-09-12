@@ -280,10 +280,7 @@
 
 .digital-particles {
   position: absolute;
-  top: -100px;
-  left: -100px;
-  right: -100px;
-  bottom: -100px;
+  inset: 0;
   pointer-events: none;
   z-index: 5;
 }
