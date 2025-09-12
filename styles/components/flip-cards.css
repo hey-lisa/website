@@ -104,19 +104,19 @@
   .front-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.25) 45%, rgba(0,0,0,0));
+    background: linear-gradient(to top, var(--black-transparent-7), var(--black-transparent-25) 45%, transparent);
   }
   .front-dim {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.55);
+    background: var(--black-transparent-55);
   }
   .front-content {
     position: relative;
     z-index: 2;
     width: 100%;
     padding: 18px 18px 22px 18px;
-    color: #e9ffe9;
+    color: var(--green-light);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -129,9 +129,9 @@
     font-size: 11px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #e9ffe9;
+    color: var(--green-light);
     border: 1px solid var(--lisa-green-subtle);
-    background: rgba(0,0,0,.35);
+    background: var(--black-transparent-35);
     border-radius: 9999px;
   }
   .front-tags { display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
@@ -430,7 +430,7 @@
     text-transform: uppercase;
     color: hsl(var(--hue), 85%, 85%);
     border: 1px solid hsla(var(--hue), 50%, 50%, .35);
-    background: rgba(0,0,0,.45);
+    background: var(--black-transparent-45);
     border-radius: 9999px;
   }
   .back-gradient {
@@ -443,7 +443,7 @@
   .back-dim {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,.55);
+    background: var(--black-transparent-55);
   }
   .back-panel {
     position: relative;
@@ -451,7 +451,7 @@
     width: 100%;
     padding: 18px;
     margin: 0 10px 12px 10px;
-    background: rgba(0,0,0,.45);
+    background: var(--black-transparent-45);
     border: 1px solid hsla(var(--hue), 50%, 50%, .22);
     border-radius: 14px;
     backdrop-filter: blur(6px) saturate(120%);
@@ -497,8 +497,8 @@
     letter-spacing: .8px;
     padding: 6px 12px;
     color: rgba(200,200,200,.9);
-    background: rgba(24,24,27,.45);
-    border: 1px dashed rgba(63,63,70,.65);
+    background: var(--modal-bg);
+    border: 1px dashed var(--dashed-border);
     border-radius: 6px;
     box-shadow: 0 10px 22px -12px rgba(0,0,0,.18), 0 0 24px 10px rgba(0,0,0,.08);
     text-shadow: none;
@@ -523,8 +523,8 @@
   .flip-card-container .back-panel .open-cta:focus,
   .flip-card-container .back-panel .open-cta:active {
     color: var(--lisa-green);
-    background: rgba(24,24,27,.55);
-    border: 1px solid rgba(63,63,70,.75);
+    background: var(--modal-bg);
+    border: 1px solid var(--dashed-border);
     text-shadow: 0 0 8px var(--lisa-green-subtle);
     box-shadow: 0 12px 28px -10px var(--lisa-green-glow), 0 0 32px 12px var(--lisa-green-glow);
     animation: open-cta-pulse 1.2s ease-in-out infinite;
@@ -543,22 +543,35 @@
   .flip-card-container .back-panel .open-cta:focus-visible {
     outline: none;
     color: var(--lisa-green);
-    background: rgba(24,24,27,.55);
-    border: 1px solid rgba(63,63,70,.75);
+    background: var(--modal-bg);
+    border: 1px solid var(--dashed-border);
     box-shadow: 0 12px 28px -10px var(--lisa-green-glow), 0 0 32px 12px var(--lisa-green-glow), 0 0 0 2px rgba(63,63,70,.45);
     text-shadow: 0 0 8px var(--lisa-green-subtle);
   }
 
 
-/* Hue-based overrides to ensure accent color applies everywhere (front/back, idle and hover) */
+  /* Hue-based overrides to ensure accent color applies everywhere (front/back, idle and hover) */
   .flip-card-container .card-front,
   .flip-card-container .card-back {
     border: 1px solid hsla(var(--hue), 50%, 50%, .18);
     box-shadow: inset 0 0 0 1px hsla(var(--hue), 50%, 50%, .06), 0 0 10px hsla(var(--hue), 50%, 50%, .06);
   }
+  
+  /* LiSA card override - use main theme colors instead of hue-based */
+  .flip-card-container[style*="--hue: 160"] .card-front,
+  .flip-card-container[style*="--hue: 160"] .card-back {
+    border: 1px solid var(--lisa-green-glow);
+    box-shadow: inset 0 0 0 1px var(--lisa-green-glow), 0 0 10px var(--lisa-green-glow);
+  }
   .flip-card-container:hover .card-back {
     border-color: hsla(var(--hue), 50%, 50%, .28);
     box-shadow: inset 0 0 0 1px hsla(var(--hue), 50%, 50%, .12), 0 0 16px hsla(var(--hue), 50%, 50%, .12);
+  }
+  
+  /* LiSA card hover override */
+  .flip-card-container[style*="--hue: 160"]:hover .card-back {
+    border-color: var(--lisa-green-dim);
+    box-shadow: inset 0 0 0 1px var(--lisa-green-subtle), 0 0 16px var(--lisa-green-subtle);
   }
 
   .front-soon {
@@ -587,3 +600,76 @@
   }
   .back-title { text-shadow: 0 0 6px hsla(var(--hue), 50%, 50%, .25); }
   .back-text { color: hsl(var(--hue), 40%, 85%); }
+
+  /* ============================================== */
+  /* LISA CARD OVERRIDES - ELIMINATE ALL HSL COLORS */
+  /* ============================================== */
+  .flip-card-container[style*="--hue: 160"] .front-soon {
+    color: var(--lisa-green) !important;
+    border: 1px solid var(--lisa-green-subtle) !important;
+  }
+  .flip-card-container[style*="--hue: 160"] .front-title { 
+    text-shadow: 0 0 10px var(--lisa-green-subtle) !important; 
+    color: var(--lisa-green) !important; 
+  }
+  .flip-card-container[style*="--hue: 160"] .front-sub { 
+    color: var(--lisa-green) !important; 
+  }
+  .flip-card-container[style*="--hue: 160"] .front-tag { 
+    color: var(--lisa-green) !important; 
+  }
+  .flip-card-container[style*="--hue: 160"] .front-tag::before,
+  .flip-card-container[style*="--hue: 160"] .front-tag::after {
+    background: linear-gradient(to bottom, transparent, var(--lisa-green-subtle), transparent) !important;
+  }
+  .flip-card-container[style*="--hue: 160"] .front-scanline { 
+    background: linear-gradient(90deg, transparent, var(--lisa-green-dim), transparent) !important; 
+  }
+  .flip-card-container[style*="--hue: 160"] .back-soon {
+    color: var(--lisa-green) !important;
+    border: 1px solid var(--lisa-green-subtle) !important;
+  }
+  .flip-card-container[style*="--hue: 160"] .back-panel {
+    border: 1px solid var(--lisa-green-subtle) !important;
+    color: var(--white) !important;
+    box-shadow: 0 0 14px var(--lisa-green-glow) !important;
+  }
+  .flip-card-container[style*="--hue: 160"] .back-title { 
+    text-shadow: 0 0 6px var(--lisa-green-subtle) !important; 
+  }
+  .flip-card-container[style*="--hue: 160"] .back-text { 
+    color: var(--white) !important; 
+  }
+  .flip-card-container[style*="--hue: 160"] .token-line { 
+    color: var(--lisa-green-dim) !important; 
+  }
+
+  /* OPEN CTA BUTTON OVERRIDES FOR LISA */
+  .flip-card-container[style*="--hue: 160"] .open-cta::after {
+    background:
+      linear-gradient(140deg, rgba(255,255,255,.06) 0%, rgba(255,255,255,0) 40%),
+      linear-gradient(120deg, transparent 0%, var(--lisa-green-subtle) 50%, transparent 100%) !important;
+  }
+
+  /* LISA-SPECIFIC PULSE ANIMATION OVERRIDE */
+  @keyframes lisa-open-cta-pulse {
+    0%, 100% {
+      box-shadow:
+        0 0 14px var(--lisa-green-subtle),
+        0 0 28px var(--lisa-green-glow),
+        inset 0 0 7px var(--lisa-green-glow);
+    }
+    50% {
+      box-shadow:
+        0 0 21px var(--lisa-green-dim),
+        0 0 36px var(--lisa-green-subtle),
+        inset 0 0 10px var(--lisa-green-subtle);
+    }
+  }
+
+  /* Apply Lisa-specific animation to Lisa's card */
+  .flip-card-container[style*="--hue: 160"] .open-cta:hover,
+  .flip-card-container[style*="--hue: 160"] .open-cta:focus,
+  .flip-card-container[style*="--hue: 160"] .open-cta:active {
+    animation: lisa-open-cta-pulse 1.2s ease-in-out infinite !important;
+  }

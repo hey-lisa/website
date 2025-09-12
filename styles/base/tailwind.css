@@ -17,15 +17,15 @@
   .lisa-primary { color: var(--lisa-green); }
   .lisa-accent { color: var(--accent); }
   .glow-green { text-shadow: 0 0 6px var(--lisa-green-dim); }
-  .glow-accent { text-shadow: 0 0 6px rgba(247,154,175,.45); }
+  .glow-accent { text-shadow: 0 0 6px var(--accent); }
 
   body { background: var(--bg); color: var(--fg); }
   hr, .border-t, .border-b { border-color: var(--line) !important; }
   a { color: var(--fg); }
   a:hover { color: var(--lisa-green); text-shadow: 0 0 6px var(--lisa-green-dim); }
   .lisa-heart { 
-    color: #ff6fa5; 
-    text-shadow: 0 0 10px rgba(247,154,175,.6), 0 0 4px rgba(247,154,175,.5); 
+    color: var(--accent); 
+    text-shadow: 0 0 10px var(--accent), 0 0 4px var(--accent); 
     animation: lisa-heart 1.6s ease-in-out infinite; 
     font-size: 16px; 
     line-height: 1; 

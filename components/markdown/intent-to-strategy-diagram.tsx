@@ -37,12 +37,12 @@ function UserNode({ data, isConnectable }: { data: { isUserActive: boolean, labe
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isUserActive 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -56,8 +56,8 @@ function UserNode({ data, isConnectable }: { data: { isUserActive: boolean, labe
         textAlign: 'center',
         opacity: isUserActive ? 1 : 0.7,
         boxShadow: isUserActive 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 15px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
         {data.label}
@@ -107,12 +107,12 @@ function LisaNode({ data, isConnectable }: { data: { isProcessing: boolean, labe
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isProcessing 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -126,8 +126,8 @@ function LisaNode({ data, isConnectable }: { data: { isProcessing: boolean, labe
         textAlign: 'center',
         opacity: isProcessing ? 1 : 0.7,
         boxShadow: isProcessing 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 15px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease',
         animation: isProcessing ? 'pulse 2s infinite' : 'none'
       }}>
@@ -161,12 +161,12 @@ function AgentNode({ data, isConnectable }: { data: { isPulsing: boolean, isFadi
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isPulsing 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '8px',
         fontSize: '11px',
@@ -178,8 +178,8 @@ function AgentNode({ data, isConnectable }: { data: { isPulsing: boolean, isFadi
         textAlign: 'center',
         opacity: isFadingOut ? 0 : 1,
         boxShadow: isPulsing 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 15px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.5s ease, border 0.5s ease, box-shadow 0.5s ease',
         animation: isPulsing ? 'pulse 2s infinite' : 'none'
       }}>
@@ -207,10 +207,10 @@ function GroupNode({ data, isConnectable }: { data: { isActive: boolean, label: 
         width: '200px', 
         height: '120px',
         background: 'transparent',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isActive 
-          ? '2px dashed rgba(16, 185, 129, 0.8)' 
-          : '1px dashed rgba(16, 185, 129, 0.3)',
+          ? '2px dashed var(--lisa-green)' 
+          : '1px dashed var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -220,7 +220,7 @@ function GroupNode({ data, isConnectable }: { data: { isActive: boolean, label: 
         justifyContent: 'center',
         opacity: isActive ? 1 : 0.7,
         boxShadow: isActive 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
+          ? '0 0 15px var(--lisa-green-subtle)' 
           : 'none',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease',
         animation: isActive ? 'pulse 2s infinite' : 'none'
@@ -384,17 +384,17 @@ export default function IntentToStrategyDiagram() {
         style: { 
           width: '50px', 
           height: '50px',
-          background: isNewest ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.1)',
+          background: isNewest ? 'var(--white-transparent-2)' : 'var(--white-transparent-1)',
           backdropFilter: 'blur(10px)',
-          color: '#065f46',
-          border: isNewest ? '2px solid rgba(16, 185, 129, 0.8)' : '1px solid rgba(16, 185, 129, 0.3)',
+          color: 'var(--diagram-text)',
+          border: isNewest ? '2px solid var(--lisa-green)' : '1px solid var(--lisa-green-subtle)',
           borderRadius: '8px',
           fontSize: '8px',
           fontWeight: '600',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: isNewest ? '0 0 10px rgba(16, 185, 129, 0.4)' : 'none',
+          boxShadow: isNewest ? '0 0 10px var(--lisa-green-subtle)' : 'none',
           animation: isNewest ? 'pulse 2s infinite' : 'none',
           transition: 'all 0.3s ease'
         },
@@ -419,20 +419,20 @@ export default function IntentToStrategyDiagram() {
       type: 'step',
       animated: animationStep === 3,
       style: { 
-        stroke: animationStep === 3 ? '#10b981' : 'rgba(16, 185, 129, 0.4)', 
+        stroke: animationStep === 3 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)', 
         strokeWidth: 2,
         strokeDasharray: '6 4',
-        filter: animationStep === 3 ? 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))' : 'none',
+        filter: animationStep === 3 ? 'drop-shadow(0 0 6px var(--lisa-green-dim))' : 'none',
         transition: 'all 0.3s ease'
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: animationStep === 3 ? '#10b981' : 'rgba(16, 185, 129, 0.4)',
+        color: animationStep === 3 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)',
       },
       label: animationStep === 3 ? 'Description' : undefined,
       labelStyle: {
         fontSize: '10px',
-        fill: '#10b981',
+        fill: 'var(--diagram-edge)',
         fontWeight: '500'
       }
     },
@@ -446,20 +446,20 @@ export default function IntentToStrategyDiagram() {
       type: 'step',
       animated: animationStep === 10,
       style: { 
-        stroke: animationStep === 10 ? '#10b981' : 'rgba(16, 185, 129, 0.4)', 
+        stroke: animationStep === 10 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)', 
         strokeWidth: 2,
         strokeDasharray: '6 4',
-        filter: animationStep === 10 ? 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))' : 'none',
+        filter: animationStep === 10 ? 'drop-shadow(0 0 6px var(--lisa-green-dim))' : 'none',
         transition: 'all 0.3s ease'
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: animationStep === 10 ? '#10b981' : 'rgba(16, 185, 129, 0.4)',
+        color: animationStep === 10 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)',
       },
       label: animationStep === 10 ? 'Strategy Ready' : undefined,
       labelStyle: {
         fontSize: '10px',
-        fill: '#10b981',
+        fill: 'var(--diagram-edge)',
         fontWeight: '500'
       }
     }
@@ -478,19 +478,19 @@ export default function IntentToStrategyDiagram() {
           type: 'step',
           animated: animationStep === 6, // Only animate on first appearance
           style: { 
-            stroke: '#10b981', 
+            stroke: 'var(--diagram-edge)', 
             strokeWidth: 2,
             strokeDasharray: '6 4',
-            filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))'
+            filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))'
           },
           markerEnd: {
             type: MarkerType.ArrowClosed,
-            color: '#10b981',
+            color: 'var(--diagram-edge)',
           },
           label: 'Request',
           labelStyle: {
             fontSize: '10px',
-            fill: '#10b981',
+            fill: 'var(--diagram-edge)',
             fontWeight: '500'
           }
         });
@@ -507,19 +507,19 @@ export default function IntentToStrategyDiagram() {
           type: 'step',
           animated: true,
           style: { 
-            stroke: '#10b981', 
+            stroke: 'var(--diagram-edge)', 
             strokeWidth: 2,
             strokeDasharray: '6 4',
-            filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))'
+            filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))'
           },
           markerEnd: {
             type: MarkerType.ArrowClosed,
-            color: '#10b981',
+            color: 'var(--diagram-edge)',
           },
           label: 'Strategy Spec',
           labelStyle: {
             fontSize: '10px',
-            fill: '#10b981',
+            fill: 'var(--diagram-edge)',
             fontWeight: '500'
           }
         });
@@ -540,7 +540,7 @@ export default function IntentToStrategyDiagram() {
           stroke: '#10b981', 
           strokeWidth: 2,
           strokeDasharray: '6 4',
-          filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))'
+          filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))'
         },
         markerEnd: {
           type: MarkerType.ArrowClosed,
@@ -549,7 +549,7 @@ export default function IntentToStrategyDiagram() {
         label: 'Adding Strategy',
         labelStyle: {
           fontSize: '10px',
-          fill: '#10b981',
+          fill: 'var(--diagram-edge)',
           fontWeight: '500'
         }
       });
@@ -578,11 +578,11 @@ export default function IntentToStrategyDiagram() {
 
         /* Style ReactFlow edge labels */
         .react-flow__edge-text {
-          fill: #10b981 !important;
+          fill: var(--diagram-edge) !important;
         }
         
         .react-flow__edge-textbg {
-          fill: #1f2937 !important;
+          fill: var(--diagram-edge-bg) !important;
           stroke: none !important;
           fill-opacity: 1 !important;
         }
@@ -614,7 +614,7 @@ export default function IntentToStrategyDiagram() {
         height: 'clamp(400px, 60vh, 600px)', 
         width: '100%', 
         background: 'transparent',
-        border: '1px solid rgba(16, 185, 129, 0.2)',
+        border: '1px solid var(--lisa-green-glow)',
         borderRadius: '12px',
         marginBottom: '20px'
       }}>

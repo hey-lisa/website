@@ -33,13 +33,13 @@
 
 .error-404::before {
   animation: glitch-1 0.5s infinite;
-  color: #ef4444;
+  color: var(--glitch-red);
   z-index: -1;
 }
 
 .error-404::after {
   animation: glitch-2 0.5s infinite;
-  color: #3b82f6;
+  color: var(--glitch-blue);
   z-index: -2;
 }
 

@@ -9,7 +9,7 @@
 
 .modal-overlay {
   position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
-  background: rgba(0,0,0,.45); z-index: 50; animation: modal-fade .18s ease-out both;
+  background: var(--black-transparent-45); z-index: 50; animation: modal-fade .18s ease-out both;
   backdrop-filter: blur(2px) grayscale(100%) saturate(0%) contrast(105%);
   -webkit-backdrop-filter: blur(2px) grayscale(100%) saturate(0%) contrast(105%);
   padding: 0.5rem;
@@ -88,7 +88,7 @@
   grid-template-columns: 1fr; 
   gap: 6px; 
   margin: 16px 0 12px 0; 
-  color: #ffffff;
+  color: var(--white);
   flex-shrink: 1;
   min-height: 0;
 }
@@ -314,7 +314,7 @@
 
 .spec-key { 
   font-weight: 800; 
-  color: #9aa99a; 
+  color: var(--spec-key); 
   margin-bottom: 5px; 
   font-size: 14px;
   letter-spacing: 0.3px;
@@ -322,7 +322,7 @@
 }
 
 .spec-desc { 
-  color: #ffffff; 
+  color: var(--white); 
   opacity: .9; 
   font-size: 13px;
   line-height: 1.4;
@@ -337,7 +337,7 @@
 /* Modal paragraph */
 .modal-paragraph { 
   margin: 14px 0; 
-  color: #ffffff; 
+  color: var(--white); 
   opacity: .92; 
   line-height: 1.5; 
   text-align: center; 
@@ -350,7 +350,7 @@
   transition: color .2s ease, text-shadow .2s ease, border-color .2s ease;
 }
 .modal-card a:hover {
-  color: #ffffff;
+  color: var(--white);
   text-shadow: 0 0 10px var(--lisa-green-dim), 0 0 4px var(--lisa-green-dim);
   border-bottom-color: var(--lisa-green-dim);
 }
@@ -598,3 +598,35 @@
   100% { opacity: 0; transform: scale(0) }
 }
 @keyframes content-fall { from { opacity: 1; transform: translateY(0) } to { opacity: 0; transform: translateY(10px) } }
+
+/* ============================================== */
+/* LISA MODAL OVERRIDES - ELIMINATE ALL HSL COLORS */
+/* ============================================== */
+.modal-overlay[style*="--hue: 160"] .modal-card {
+  border: 1px solid var(--lisa-green-subtle) !important;
+  color: var(--white) !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 16px var(--lisa-green-glow) !important;
+}
+
+.modal-overlay[style*="--hue: 160"] .modal-close-x {
+  border: 1px solid var(--lisa-green-subtle) !important;
+  color: var(--lisa-green) !important;
+}
+
+.modal-overlay[style*="--hue: 160"] .modal-close-x:hover {
+  color: #fff !important;
+  border-color: var(--lisa-green-dim) !important;
+  background: rgba(0,0,0,.22) !important;
+}
+
+.modal-overlay[style*="--hue: 160"] .modal-card::before {
+  background: radial-gradient(ellipse at center, var(--lisa-green-subtle) 0%, rgba(0,0,0,0) 55%) !important;
+}
+
+.modal-overlay[style*="--hue: 160"] .modal-card::after {
+  background: linear-gradient(90deg, transparent, var(--lisa-green-dim), transparent) !important;
+}
+
+.modal-overlay[style*="--hue: 160"] .modal-title {
+  text-shadow: 0 0 8px var(--lisa-green-subtle) !important;
+}

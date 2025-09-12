@@ -17,7 +17,7 @@
 }
 
 .lisa-link:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 /* === PROSE LINK STYLING === */
@@ -32,7 +32,7 @@
 }
 
 .lisa-prose a:hover {
-  color: #fff !important;
+  color: var(--white) !important;
 }
 
 /* Blog card hover effect - glowing green border */

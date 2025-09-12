@@ -28,12 +28,12 @@ function OracleNode({ data, isConnectable }: { data: { isActive: boolean, label:
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isActive 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -47,8 +47,8 @@ function OracleNode({ data, isConnectable }: { data: { isActive: boolean, label:
         textAlign: 'center',
         opacity: isActive ? 1 : 0.7,
         boxShadow: isActive 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 15px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
         {data.label}
@@ -78,12 +78,12 @@ function StrategyNode({ data, isConnectable }: { data: { isActive: boolean, labe
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isActive 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -97,8 +97,8 @@ function StrategyNode({ data, isConnectable }: { data: { isActive: boolean, labe
         textAlign: 'center',
         opacity: isActive ? 1 : 0.7,
         boxShadow: isActive 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 15px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
         {data.label}
@@ -145,12 +145,12 @@ function TradingEngineNode({ data, isConnectable }: { data: { isProcessing: bool
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isProcessing 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -164,8 +164,8 @@ function TradingEngineNode({ data, isConnectable }: { data: { isProcessing: bool
         textAlign: 'center',
         opacity: isProcessing ? 1 : 0.8,
         boxShadow: isProcessing 
-          ? '0 0 20px rgba(16, 185, 129, 0.5), 0 0 40px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 20px var(--lisa-green-dim), 0 0 40px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.5s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
         {data.label}
@@ -188,12 +188,12 @@ function HyperliquidNode({ data, isConnectable }: { data: { isActive: boolean, l
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isActive 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -207,8 +207,8 @@ function HyperliquidNode({ data, isConnectable }: { data: { isActive: boolean, l
         textAlign: 'center',
         opacity: isActive ? 1 : 0.7,
         boxShadow: isActive 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
-          : '0 2px 8px rgba(0, 0, 0, 0.05)',
+          ? '0 0 15px var(--lisa-green-subtle)' 
+          : '0 2px 8px var(--black-transparent-05)',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
         {data.label}
@@ -306,20 +306,20 @@ export default function StrategyExecutionDiagram() {
       type: 'straight',
       animated: true,
       style: { 
-        stroke: '#10b981', 
+        stroke: 'var(--diagram-edge)', 
         strokeWidth: 2,
         strokeDasharray: '6 4',
-        filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+        filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
         transition: 'all 0.3s ease'
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: '#10b981'
+        color: 'var(--diagram-edge)'
       },
       label: 'Market Data',
       labelStyle: {
         fontSize: '10px',
-        fill: '#10b981',
+        fill: 'var(--diagram-edge)',
         fontWeight: '500'
       }
     }
@@ -336,20 +336,20 @@ export default function StrategyExecutionDiagram() {
         type: 'straight',
         animated: true,
         style: { 
-          stroke: '#10b981', 
+          stroke: 'var(--diagram-edge)', 
           strokeWidth: 2,
           strokeDasharray: '6 4',
-          filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+          filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
           transition: 'all 0.3s ease'
         },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: '#10b981'
+          color: 'var(--diagram-edge)'
         },
         label: 'Request Strategy',
         labelStyle: {
           fontSize: '10px',
-          fill: '#10b981',
+          fill: 'var(--diagram-edge)',
           fontWeight: '500'
         }
       });
@@ -366,20 +366,20 @@ export default function StrategyExecutionDiagram() {
         type: 'straight',
         animated: true,
         style: { 
-          stroke: '#10b981', 
+          stroke: 'var(--diagram-edge)', 
           strokeWidth: 2,
           strokeDasharray: '6 4',
-          filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+          filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
           transition: 'all 0.3s ease'
         },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: '#10b981'
+          color: 'var(--diagram-edge)'
         },
         label: 'Strategy Rules',
         labelStyle: {
           fontSize: '10px',
-          fill: '#10b981',
+          fill: 'var(--diagram-edge)',
           fontWeight: '500'
         }
       });
@@ -396,20 +396,20 @@ export default function StrategyExecutionDiagram() {
         type: 'straight',
         animated: true,
         style: { 
-          stroke: '#10b981', 
+          stroke: 'var(--diagram-edge)', 
           strokeWidth: 2,
           strokeDasharray: '6 4',
-          filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+          filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
           transition: 'all 0.3s ease'
         },
         markerEnd: {
           type: MarkerType.ArrowClosed,
-          color: '#10b981'
+          color: 'var(--diagram-edge)'
         },
         label: 'Place Order',
         labelStyle: {
           fontSize: '10px',
-          fill: '#10b981',
+          fill: 'var(--diagram-edge)',
           fontWeight: '500'
         }
       });
@@ -467,11 +467,11 @@ export default function StrategyExecutionDiagram() {
           
           @keyframes aggregatorPulse {
           0%, 100% { 
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 0 15px var(--lisa-green-subtle), 0 0 30px var(--lisa-green-glow);
             transform: scale(1);
           }
           50% { 
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 25px var(--lisa-green-dim), 0 0 50px var(--lisa-green-subtle);
             transform: scale(1.02);
           }
         }
@@ -488,11 +488,11 @@ export default function StrategyExecutionDiagram() {
           }
           
           .react-flow__edge-text {
-            fill: #10b981 !important;
+            fill: var(--diagram-edge) !important;
           }
           
           .react-flow__edge-textbg {
-            fill: #065f46 !important;
+            fill: var(--diagram-edge-bg) !important;
             stroke: none !important;
           }
 
@@ -524,7 +524,7 @@ export default function StrategyExecutionDiagram() {
         width: '100%', 
         position: 'relative',
         background: 'transparent',
-        border: '1px solid rgba(16, 185, 129, 0.2)',
+        border: '1px solid var(--lisa-green-glow)',
         borderRadius: '12px',
         marginBottom: '20px'
       }}>

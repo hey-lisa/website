@@ -63,12 +63,12 @@ function UserNode({ data, isConnectable }: { data: { isUserActive: boolean, labe
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isUserActive 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -82,7 +82,7 @@ function UserNode({ data, isConnectable }: { data: { isUserActive: boolean, labe
         textAlign: 'center',
         opacity: isUserActive ? 1 : 0.7,
         boxShadow: isUserActive 
-          ? '0 0 15px rgba(16, 185, 129, 0.3)' 
+          ? '0 0 15px var(--lisa-green-subtle)' 
           : '0 2px 8px rgba(0, 0, 0, 0.05)',
         transition: 'opacity 0.3s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
@@ -141,12 +141,12 @@ function LisaNode({ data, isConnectable }: { data: { isProcessing: boolean, labe
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isProcessing 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -160,7 +160,7 @@ function LisaNode({ data, isConnectable }: { data: { isProcessing: boolean, labe
         textAlign: 'center',
         opacity: isProcessing ? 1 : 0.6,
         boxShadow: isProcessing 
-          ? '0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2)' 
+          ? '0 0 15px var(--lisa-green-subtle), 0 0 30px var(--lisa-green-glow)' 
           : '0 2px 8px rgba(0, 0, 0, 0.05)',
         transition: 'opacity 0.5s ease, border 0.5s ease, box-shadow 0.5s ease'
       }}>
@@ -192,12 +192,12 @@ function AggregatorsNode({ data, isConnectable }: { data: { isPulsing: boolean, 
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isPulsing 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -213,7 +213,7 @@ function AggregatorsNode({ data, isConnectable }: { data: { isPulsing: boolean, 
         opacity: data.isFadingOut ? 0 : (isPulsing ? 1 : 0.6),
         animation: data.isFadingOut ? 'fadeOut 0.8s ease forwards' : 'fadeIn 0.8s ease',
         boxShadow: isPulsing 
-          ? '0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2)' 
+          ? '0 0 15px var(--lisa-green-subtle), 0 0 30px var(--lisa-green-glow)' 
           : '0 2px 8px rgba(0, 0, 0, 0.05)'
       }}>
         {data.label}
@@ -244,12 +244,12 @@ function SmartContractsNode({ data, isConnectable }: { data: { isPulsing: boolea
       />
       
       <div style={{
-        background: 'rgba(255, 255, 255, 0.1)',
+        background: 'var(--diagram-bg)',
         backdropFilter: 'blur(10px)',
-        color: '#065f46',
+        color: 'var(--diagram-text)',
         border: isPulsing 
-          ? '2px solid rgba(16, 185, 129, 0.8)' 
-          : '1px solid rgba(16, 185, 129, 0.3)',
+          ? '2px solid var(--lisa-green)' 
+          : '1px solid var(--lisa-green-subtle)',
         borderRadius: '12px',
         padding: '10px',
         fontSize: '12px',
@@ -265,7 +265,7 @@ function SmartContractsNode({ data, isConnectable }: { data: { isPulsing: boolea
         opacity: data.isFadingOut ? 0 : (isPulsing ? 1 : 0.6),
         animation: data.isFadingOut ? 'fadeOut 0.8s ease forwards' : 'fadeIn 0.8s ease',
         boxShadow: isPulsing 
-          ? '0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2)' 
+          ? '0 0 15px var(--lisa-green-subtle), 0 0 30px var(--lisa-green-glow)' 
           : '0 2px 8px rgba(0, 0, 0, 0.05)'
       }}>
         {data.label}
@@ -280,8 +280,8 @@ function SeparatorNode() {
     <div style={{
       width: '1px',
       height: '400px',
-      background: 'linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0.3) 80%, transparent 100%)',
-      borderLeft: '1px dashed rgba(255, 255, 255, 0.2)',
+      background: 'linear-gradient(to bottom, transparent 0%, var(--white-transparent-1) 20%, var(--white-transparent-1) 80%, transparent 100%)',
+      borderLeft: '1px dashed var(--white-transparent-1)',
       pointerEvents: 'none'
     }} />
   );
@@ -293,7 +293,7 @@ function AnnotationNode({ data }: { data: { label: string } }) {
     <div style={{
       fontSize: '14px',
       fontWeight: '300',
-      color: 'rgba(255, 255, 255, 0.4)',
+      color: 'var(--white-transparent-1)',
       pointerEvents: 'none',
       textAlign: 'center',
       width: '100px',
@@ -447,20 +447,20 @@ export default function TransactionFlowDiagram() {
       type: 'step',
       animated: animationStep === 1,
       style: { 
-        stroke: animationStep === 1 ? '#10b981' : 'rgba(16, 185, 129, 0.4)', 
+        stroke: animationStep === 1 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)', 
         strokeWidth: 2,
         strokeDasharray: '6 4',
-        filter: animationStep === 1 ? 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))' : 'none',
+        filter: animationStep === 1 ? 'drop-shadow(0 0 6px var(--lisa-green-dim))' : 'none',
         transition: 'all 0.3s ease'
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: animationStep === 1 ? '#10b981' : 'rgba(16, 185, 129, 0.4)'
+        color: animationStep === 1 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)'
       },
       label: animationStep === 1 ? 'NL Request' : undefined,
       labelStyle: {
         fontSize: '10px',
-        fill: '#10b981',
+        fill: 'var(--diagram-edge)',
         fontWeight: '500'
       }
     },
@@ -474,20 +474,20 @@ export default function TransactionFlowDiagram() {
       type: 'step',
       animated: animationStep === 7,  // Moved to step 8
       style: { 
-        stroke: animationStep === 7 ? '#10b981' : 'rgba(16, 185, 129, 0.4)', 
+        stroke: animationStep === 7 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)', 
         strokeWidth: 2,
         strokeDasharray: '6 4',
-        filter: animationStep === 7 ? 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))' : 'none',
+        filter: animationStep === 7 ? 'drop-shadow(0 0 6px var(--lisa-green-dim))' : 'none',
         transition: 'all 0.3s ease'
       },
       markerEnd: {
         type: MarkerType.ArrowClosed,
-        color: animationStep === 7 ? '#10b981' : 'rgba(16, 185, 129, 0.4)'
+        color: animationStep === 7 ? 'var(--diagram-edge)' : 'var(--lisa-green-subtle)'
       },
       label: animationStep === 7 ? 'Unsigned Transactions' : undefined,
       labelStyle: {
         fontSize: '10px',
-        fill: '#10b981',
+        fill: 'var(--diagram-edge)',
         fontWeight: '500'
       }
     }
@@ -506,10 +506,10 @@ export default function TransactionFlowDiagram() {
           type: 'straight',
           animated: true,
           style: { 
-            stroke: '#10b981', 
+            stroke: 'var(--diagram-edge)', 
             strokeWidth: 2,
             strokeDasharray: '6 4',
-            filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+            filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
             transition: 'all 0.3s ease'
           },
           markerEnd: {
@@ -519,7 +519,7 @@ export default function TransactionFlowDiagram() {
           label: 'Requests',
           labelStyle: {
             fontSize: '10px',
-            fill: '#10b981',
+            fill: 'var(--diagram-edge)',
             fontWeight: '500'
           }
         });
@@ -536,10 +536,10 @@ export default function TransactionFlowDiagram() {
           type: 'straight',
           animated: true,
           style: { 
-            stroke: '#10b981', 
+            stroke: 'var(--diagram-edge)', 
             strokeWidth: 2,
             strokeDasharray: '6 4',
-            filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+            filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
             transition: 'all 0.3s ease'
           },
           markerEnd: {
@@ -549,7 +549,7 @@ export default function TransactionFlowDiagram() {
           label: 'Quotes/Routes',
           labelStyle: {
             fontSize: '10px',
-            fill: '#10b981',
+            fill: 'var(--diagram-edge)',
             fontWeight: '500'
           }
         });
@@ -569,10 +569,10 @@ export default function TransactionFlowDiagram() {
           type: 'straight',
           animated: true,
           style: { 
-            stroke: '#10b981', 
+            stroke: 'var(--diagram-edge)', 
             strokeWidth: 2,
             strokeDasharray: '6 4',
-            filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+            filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
             transition: 'all 0.3s ease'
           },
           markerEnd: {
@@ -582,7 +582,7 @@ export default function TransactionFlowDiagram() {
           label: 'Execute TXs',
           labelStyle: {
             fontSize: '10px',
-            fill: '#10b981',
+            fill: 'var(--diagram-edge)',
             fontWeight: '500'
           }
         });
@@ -599,10 +599,10 @@ export default function TransactionFlowDiagram() {
           type: 'straight',
           animated: true,
           style: { 
-            stroke: '#10b981', 
+            stroke: 'var(--diagram-edge)', 
             strokeWidth: 2,
             strokeDasharray: '6 4',
-            filter: 'drop-shadow(0 0 6px rgba(16, 185, 129, 0.6))',
+            filter: 'drop-shadow(0 0 6px var(--lisa-green-dim))',
             transition: 'all 0.3s ease'
           },
           markerEnd: {
@@ -612,7 +612,7 @@ export default function TransactionFlowDiagram() {
           label: 'TX Confirmed',
           labelStyle: {
             fontSize: '10px',
-            fill: '#10b981',
+            fill: 'var(--diagram-edge)',
             fontWeight: '500'
           }
         });
@@ -671,11 +671,11 @@ export default function TransactionFlowDiagram() {
           
           @keyframes aggregatorPulse {
           0%, 100% { 
-            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2);
+            box-shadow: 0 0 15px var(--lisa-green-subtle), 0 0 30px var(--lisa-green-glow);
             transform: scale(1);
           }
           50% { 
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.6), 0 0 50px rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 25px var(--lisa-green-dim), 0 0 50px var(--lisa-green-subtle);
             transform: scale(1.02);
           }
         }
@@ -692,11 +692,11 @@ export default function TransactionFlowDiagram() {
           }
           
           .react-flow__edge-text {
-            fill: #10b981 !important;
+            fill: var(--diagram-edge) !important;
           }
           
           .react-flow__edge-textbg {
-            fill: #065f46 !important;
+            fill: var(--diagram-edge-bg) !important;
             stroke: none !important;
           }
 
@@ -728,7 +728,7 @@ export default function TransactionFlowDiagram() {
         width: '100%', 
         position: 'relative',
         background: 'transparent',
-        border: '1px solid rgba(16, 185, 129, 0.2)',
+        border: '1px solid var(--lisa-green-glow)',
         borderRadius: '12px',
         marginBottom: '20px'
       }}>

@@ -16,6 +16,30 @@
   --lisa-green-dim: rgba(167,243,208,.6);  
   --lisa-green-subtle: rgba(167,243,208,.3);
   --lisa-green-glow: rgba(167,243,208,.15);
+  
+  /* COMPLETE COLOR SYSTEM - NO MORE HARDCODED SHIT */
+  --white: #ffffff;
+  --black-transparent-05: rgba(0, 0, 0, 0.05);
+  --black-transparent-25: rgba(0, 0, 0, 0.25);
+  --black-transparent-35: rgba(0, 0, 0, 0.35);
+  --black-transparent-45: rgba(0, 0, 0, 0.45);
+  --black-transparent-55: rgba(0, 0, 0, 0.55);
+  --black-transparent-7: rgba(0, 0, 0, 0.7);
+  --white-transparent-1: rgba(255, 255, 255, 0.1);
+  --white-transparent-2: rgba(255, 255, 255, 0.2);
+  --diagram-bg: var(--white-transparent-1);
+  --diagram-text: var(--lisa-green);
+  --diagram-edge: var(--lisa-green);
+  --diagram-edge-bg: var(--bg);
+  --glitch-red: #ef4444;
+  --glitch-blue: #3b82f6;
+  --green-light: var(--lisa-green-dim);
+  --green-changelog: var(--lisa-green);
+  --green-version: var(--lisa-green-dim);
+  --green-title: var(--lisa-green);
+  --dashed-border: var(--lisa-green-subtle);
+  --modal-bg: var(--black-transparent-45);
+  --spec-key: var(--lisa-green-dim);
 }
 
 /* Tailwind variables */
