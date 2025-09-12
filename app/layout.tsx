@@ -116,7 +116,7 @@ export default function RootLayout({
 
           <div className="min-h-dvh flex flex-col">
             <Navbar />
-            <main className="sm:container mx-auto w-[90vw] h-auto scroll-smooth flex-1 min-h-0">
+            <main className="sm:container mx-auto w-[90vw] h-auto scroll-smooth flex flex-col flex-1 min-h-0">
               {children}
             </main>
             <Footer />
