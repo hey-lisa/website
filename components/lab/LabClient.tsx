@@ -32,6 +32,33 @@ export default function LabClient() {
   const [inviteState, setInviteState] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [inviteAnim, setInviteAnim] = useState<"none" | "validating" | "fadeout">("none");
 
+  // Load saved email on mount
+  useEffect(() => {
+    try {
+      const saved = typeof window !== "undefined" ? window.localStorage.getItem("lisa_email") : null;
+      if (saved && typeof saved === "string") {
+        setEmail(saved);
+      }
+      const subscribed = typeof window !== "undefined" ? window.localStorage.getItem("lisa_email_subscribed") : null;
+      if (subscribed === "1") {
+        setInviteState("success");
+        setInviteAnim("none");
+      }
+    } catch {}
+  }, []);
+
+  // Persist email on changes
+  useEffect(() => {
+    try {
+      if (typeof window === "undefined") return;
+      if (email && email.trim().length > 0) {
+        window.localStorage.setItem("lisa_email", email.trim());
+      } else {
+        window.localStorage.removeItem("lisa_email");
+      }
+    } catch {}
+  }, [email]);
+
   const closeSoonModal = useCallback(() => {
     if (isClosing) return;
     setIsClosing(true);
@@ -118,6 +145,13 @@ export default function LabClient() {
           });
         }
       }, 800);
+      // Persist subscription success
+      try {
+        if (typeof window !== "undefined") {
+          window.localStorage.setItem("lisa_email_subscribed", "1");
+          window.localStorage.setItem("lisa_email", email.trim());
+        }
+      } catch {}
     } catch {
       setInviteState("error");
       setInviteAnim("none");
