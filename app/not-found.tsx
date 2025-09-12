@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function NotFound() {
   return (
-    <div className="min-h-[87vh] flex items-center justify-center px-0 md:px-4">
+    <div className="flex items-center justify-center px-0 md:px-4 py-10">
       
       {/* Image with overlaid 404 */}
       <div className="relative w-full max-w-none md:max-w-4xl overflow-hidden">

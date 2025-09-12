@@ -18,7 +18,7 @@ export default function ContactClient({ pgpKey }: ContactClientProps) {
       {/* PGP Key */}
       <div className="flex flex-col items-center space-y-4 w-full max-w-4xl">
         <CopyButton text={pgpKey} />
-        <pre className="w-full max-w-full text-[10px] sm:text-xs whitespace-pre-wrap font-mono text-left break-all md:break-normal leading-relaxed overflow-x-hidden">
+        <pre className="w-full max-w-full text-[10px] sm:text-xs whitespace-pre font-mono text-left leading-relaxed overflow-x-auto">
           {pgpKey}
         </pre>
       </div>
