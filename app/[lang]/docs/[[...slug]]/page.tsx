@@ -75,7 +75,7 @@ export default async function DocsPage(props: PageProps) {
       
       <div className="flex items-start gap-10">
         <div className="flex-[4.5] pt-10">
-          <DocsNotice dict={dict} lang={lang} />
+          <DocsNotice dict={dict} />
           <DocsBreadcrumb slug={slug} dict={dict} lang={lang} />
           <Typography>
             <h1 className="text-3xl !-mt-1.5">{res.frontmatter.title}</h1>

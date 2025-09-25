@@ -5,7 +5,6 @@ import remarkGfm from "remark-gfm";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeSlug from "rehype-slug";
 import { page_routes, ROUTES } from "./routes-config";
-import { visit } from "unist-util-visit";
 import matter from "gray-matter";
 import { Locale } from "./locale";
 

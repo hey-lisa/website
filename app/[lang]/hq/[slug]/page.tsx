@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { formatDate } from "@/lib/utils";
 import Image from "next/image";
-import { getDictionary, LangProps } from "@/lib/dictionaries";
+import { getDictionary } from "@/lib/dictionaries";
 import LocalizedLink from "@/components/localized-link";
 import { NewsArticleStructuredData, BreadcrumbStructuredData } from "@/components/seo/structured-data";
 

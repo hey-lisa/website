@@ -293,7 +293,18 @@ export default function StrategyExecutionDiagram() {
         isActive: isHyperliquidActive
       }
     }
-  ], [isOracleActive, isTradingEngineProcessing, isStrategyActive, isHyperliquidActive, animationStep, getTradingEngineStage]);
+  ], [
+    isOracleActive, 
+    isTradingEngineProcessing, 
+    isStrategyActive, 
+    isHyperliquidActive, 
+    animationStep, 
+    getTradingEngineStage,
+    dict.diagrams.strategy_execution.hyperliquid_executing_trades,
+    dict.diagrams.strategy_execution.hyperliquid_trade_execution,
+    dict.diagrams.strategy_execution.oracle_market_data,
+    dict.diagrams.strategy_execution.strategy_rules_params
+  ]);
 
   // DYNAMIC edges - Trading Engine flow
   const edges: Edge[] = useMemo(() => {
@@ -418,7 +429,13 @@ export default function StrategyExecutionDiagram() {
     }
     
     return baseEdges;
-  }, [animationStep]);
+  }, [
+    animationStep,
+    dict.diagrams.strategy_execution.market_data,
+    dict.diagrams.strategy_execution.place_order,
+    dict.diagrams.strategy_execution.request_strategy,
+    dict.diagrams.strategy_execution.strategy_rules
+  ]);
 
   // Animation sequence for Trading Engine flow
   const animateStep = useCallback(() => {

@@ -37,17 +37,19 @@ export default function LabClient({ dict }: LabClientProps) {
   // Rate limiting constants
   const RATE_LIMIT_DELAY = 10000; // 10 seconds between submissions
   
-  // Clean timeout helper
-  const addTimeout = (callback: () => void, delay: number) => {
+  // Clean timeout helper (wrapped in useCallback to prevent recreating on every render)
+  const addTimeout = useCallback((callback: () => void, delay: number) => {
     const timeout = setTimeout(callback, delay);
     timeoutRefs.current.push(timeout);
     return timeout;
-  };
+  }, []);
 
   // Cleanup timeouts on unmount
   useEffect(() => {
+    // Capture the current timeouts array to avoid ref issues in cleanup
+    const currentTimeouts = timeoutRefs.current;
     return () => {
-      timeoutRefs.current.forEach(clearTimeout);
+      currentTimeouts.forEach(clearTimeout);
     };
   }, []);
 
@@ -79,7 +81,7 @@ export default function LabClient({ dict }: LabClientProps) {
     } catch (error) {
       console.warn("Failed to load from localStorage:", error);
     }
-  }, []);
+  }, [addTimeout]);
 
   // Persist email on changes
   useEffect(() => {
@@ -169,7 +171,7 @@ export default function LabClient({ dict }: LabClientProps) {
         console.warn("Failed to save subscription state:", error);
       }
       
-    } catch (error) {
+    } catch {
       setInviteState("error");
       setInviteAnim("none");
     }

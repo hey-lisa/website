@@ -36,6 +36,7 @@ export function FlipCard({
         {/* FRONT SIDE */}
         <div className="card-front">
           <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={frontImage} alt={title} />
           </figure>
           <div className="front-gradient"></div>
@@ -153,6 +154,7 @@ export function FlipCard({
         {/* BACK SIDE */}  
         <div className="card-back">
           <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={backImage} alt={title} />
           </figure>
           <div className="back-gradient"></div>

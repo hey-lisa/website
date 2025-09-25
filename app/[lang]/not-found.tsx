@@ -14,6 +14,7 @@ export default function NotFound() {
     <div className="error-404-container">
       {/* 404 Image with Overlay */}
       <div className="error-404-image-wrapper">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/404.webp"
           alt="404 - Page Not Found"

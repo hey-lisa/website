@@ -96,7 +96,7 @@ export function LiSAModal({
                   {part !== '' && part.endsWith(' ') ? '' : ' '}
                 </React.Fragment>
               )
-            ).map((part, i, arr) => {
+            ).map((part, i) => {
               if (typeof part === 'string' && part.includes('changelog')) {
                 return part.split('changelog').map((subPart, j, subArr) =>
                   j === subArr.length - 1 ? subPart : (

@@ -434,7 +434,19 @@ export default function TransactionFlowDiagram() {
     }
     
     return baseNodes;
-  }, [animationStep, isUserActive, isLisaProcessing, isLifiActive, isSmartContractsActive, getLisaStage, getUserStage]);
+  }, [
+    animationStep, 
+    isUserActive, 
+    isLisaProcessing, 
+    isLifiActive, 
+    isSmartContractsActive, 
+    getLisaStage, 
+    getUserStage,
+    dict.diagrams.transaction_flow.aggregators,
+    dict.diagrams.transaction_flow.backend,
+    dict.diagrams.transaction_flow.frontend,
+    dict.diagrams.transaction_flow.smart_contracts
+  ]);
 
   // DYNAMIC edges - some appear/disappear with LIFI node (memoized to prevent React Flow warnings)
   const edges: Edge[] = useMemo(() => {
@@ -622,7 +634,17 @@ export default function TransactionFlowDiagram() {
     }
     
     return baseEdges;
-  }, [animationStep, isLifiActive, isSmartContractsActive]);
+  }, [
+    animationStep, 
+    isLifiActive, 
+    isSmartContractsActive,
+    dict.diagrams.transaction_flow.execute_txs,
+    dict.diagrams.transaction_flow.nl_request,
+    dict.diagrams.transaction_flow.quotes_routes,
+    dict.diagrams.transaction_flow.requests,
+    dict.diagrams.transaction_flow.tx_confirmed,
+    dict.diagrams.transaction_flow.unsigned_transactions
+  ]);
 
   // Animation sequence (expanded for LIFI)
   const animateStep = useCallback(() => {

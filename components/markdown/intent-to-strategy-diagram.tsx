@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { useDictionary } from '@/components/contexts/dictionary-provider';
+import { Dictionary } from '@/lib/dictionaries';
 import ReactFlow, { 
   Node, 
   Edge, 
@@ -233,7 +234,7 @@ function GroupNode({ data, isConnectable }: { data: { isActive: boolean, label: 
 }
 
 // Helper functions
-function getUserStage(step: AnimationStep, dict: any): string {
+function getUserStage(step: AnimationStep, dict: Dictionary): string {
   switch (step) {
     case 0: return dict.diagrams.intent_to_strategy.user_chat_with_lisa;
     case 1:
@@ -243,7 +244,7 @@ function getUserStage(step: AnimationStep, dict: any): string {
   }
 }
 
-function getLisaStage(step: AnimationStep, dict: any): string {
+function getLisaStage(step: AnimationStep, dict: Dictionary): string {
   switch (step) {
     case 3: return dict.diagrams.intent_to_strategy.lisa_chat_with_user;
     case 4:
@@ -406,7 +407,7 @@ export default function IntentToStrategyDiagram() {
     }
     
     return baseNodes;
-  }, [animationStep, isUserActive, isLisaProcessing, isAgentActive, isGroupActive, strategiesCreated]);
+  }, [animationStep, isUserActive, isLisaProcessing, isAgentActive, isGroupActive, strategiesCreated, dict]);
 
   // Define edges - always visible, highlighted when active (memoized to prevent React Flow warnings)
   const edges: Edge[] = useMemo(() => {
@@ -558,7 +559,15 @@ export default function IntentToStrategyDiagram() {
     }
     
     return baseEdges;
-  }, [animationStep, isAgentActive]);
+  }, [
+    animationStep, 
+    isAgentActive, 
+    dict.diagrams.intent_to_strategy.adding_strategy,
+    dict.diagrams.intent_to_strategy.description,
+    dict.diagrams.intent_to_strategy.request,
+    dict.diagrams.intent_to_strategy.strategy_ready,
+    dict.diagrams.intent_to_strategy.strategy_spec
+  ]);
 
   return (
     <>

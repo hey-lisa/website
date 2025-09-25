@@ -31,8 +31,8 @@ export default function DocsBreadcrumb({ slug, dict, lang }: DocsBreadcrumbProps
     const dictKey = slugToDictKey(segment);
     
     // Check if translation exists in leftbar
-    if (dict.leftbar && (dict.leftbar as any)[dictKey]) {
-      return (dict.leftbar as any)[dictKey];
+    if (dict.leftbar && dictKey in dict.leftbar) {
+      return dict.leftbar[dictKey as keyof typeof dict.leftbar];
     }
     
     // Fallback to auto-capitalization if no translation found

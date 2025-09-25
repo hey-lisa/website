@@ -3,10 +3,9 @@ import LocalizedLink from "./localized-link";
 
 interface DocsNoticeProps {
   dict: Dictionary;
-  lang: string;
 }
 
-export default function DocsNotice({ dict, lang }: DocsNoticeProps) {
+export default function DocsNotice({ dict }: DocsNoticeProps) {
   const content = dict.docs.notice.content;
   
   // Split the content to insert links at appropriate places
