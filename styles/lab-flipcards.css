@@ -339,13 +339,26 @@
 
 @media (max-width: 480px) {
   .flip-cards-container {
-    padding: 20px 2px; 
+    padding: 20px 8px; 
     gap: 12px;
   }
   
   .flip-card-container {
-    width: calc(100vw - 12px) !important; 
-    max-width: none; 
-    height: 400px !important; 
+    width: calc(100vw - 32px) !important; 
+    max-width: 280px; 
+    height: 420px !important; 
+  }
+}
+
+@media (max-width: 320px) {
+  .flip-cards-container {
+    padding: 20px 12px; 
+    gap: 10px;
+  }
+  
+  .flip-card-container {
+    width: calc(100vw - 24px) !important; 
+    max-width: 280px; 
+    height: 420px !important; 
   }
 }

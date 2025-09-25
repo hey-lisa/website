@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Dictionary } from "@/lib/dictionaries";
 import LocalizedLink from "@/components/localized-link";
+import { page_routes } from "@/lib/routes-config";
 
 interface LiSAModalProps {
   isOpen: boolean;
@@ -89,7 +90,7 @@ export function LiSAModal({
               i === arr.length - 1 ? part : (
                 <React.Fragment key={i}>
                   {part}
-                  <LocalizedLink href="/docs" className="text-primary hover:underline">
+                  <LocalizedLink href={`/docs${page_routes[0].href}`} className="text-primary hover:underline">
                     documentation
                   </LocalizedLink>
                   {part === '' && i === 0 ? ', ' : ''}

@@ -4,6 +4,7 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTrigger,
 } from "@/components/ui/sheet";
@@ -34,6 +35,9 @@ export function SheetLeftbar({ dict }: { dict: Dictionary }) {
       </SheetTrigger>
       <SheetContent className="flex flex-col gap-4 px-0" side="left">
         <DialogTitle className="sr-only">Menu</DialogTitle>
+        <SheetDescription className="sr-only">
+          Navigation menu for mobile devices
+        </SheetDescription>
         <SheetHeader className="sr-only">
           Menu
         </SheetHeader>
