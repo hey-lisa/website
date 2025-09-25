@@ -1,0 +1,15 @@
+---
+title: From intention to transactions
+description: Processing pipeline from chat instructions to wallet-ready transactions. Intent parsing and transaction generation.
+---
+
+<TransactionFlowDiagram />
+
+### Flow
+- You ask LiSA to perform an onchain move
+- LiSA discusses with you to get all necessary info (if needed)
+- After various verifications (address format, recipient policy, linked addresses, basic token checks, balance, etc.)
+- LiSA prepares transactions with aggregators and bridges
+- Transactions are returned to you in deliberate order, unsigned
+- You examine the txs, and sign them in sequence
+- After each signature, once a transaction is confirmed, the next one becomes ready to be signed

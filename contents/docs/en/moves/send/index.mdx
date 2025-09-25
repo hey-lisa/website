@@ -1,0 +1,26 @@
+---
+title: Send
+description: Direct token transfers to specified addresses. Send assets between wallets on supported networks.
+---
+
+### Objective
+- Transfer tokens to another address on a chosen chain.
+- Use for payments or to move assets between your own wallets.
+
+### Say
+- send 0.5 ETH to 0xABCD… on Arbitrum
+- send all USDC on Base to 0xABCD…
+
+### What LiSA extracts
+- Token, chain, amount, and recipient address.
+- Basic recipient verification.
+
+### Recipient policy
+- Open: send to any address.
+- Restricted: send only to linked addresses and recipients from your recipient whitelist.
+- Link an address by connecting that wallet and signing a one-time proof.
+- You can change the policy in options or by asking LiSA
+
+### Sign and verify
+- Your wallet opens with the transfer.
+- After signing, you see the status in the queue and an explorer link.

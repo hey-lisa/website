@@ -1,0 +1,31 @@
+.branded-link {
+  color: var(--lisa-green);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  text-shadow: 0 0 6px var(--lisa-green-glow);
+  transition: color 0.2s ease;
+}
+
+.branded-link:hover {
+  color: var(--primary);
+}
+
+
+.prose a {
+  color: var(--lisa-green) !important;
+  text-decoration: underline !important;
+  text-decoration-style: dotted !important;
+  text-underline-offset: 2px !important;
+  text-shadow: 0 0 6px var(--lisa-green-glow) !important;
+  transition: color 0.2s ease !important;
+}
+
+.prose a:hover {
+  color: var(--primary) !important;
+}
+
+
+.no-underline {
+  text-decoration: none !important;
+}

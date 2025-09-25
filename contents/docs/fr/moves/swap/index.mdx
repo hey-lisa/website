@@ -1,0 +1,32 @@
+---
+title: Swap
+description: Échange tokens sur la même blockchain via protocoles DEX intégrés. Asset swapping same-chain.
+---
+
+### Objectif
+- Échanger un token contre un autre sur la même blockchain
+
+### Exemple
+- swap 1 ETH en USDC sur Arbitrum
+- swap 50% des WETH en DAI sur Base
+
+### Ce que LiSA extrait
+- Token in, token out, blockchain, et montant
+- Slippage optionnelle si vous la précisez dans le chat
+
+### Quote
+- Route, fees, et minimum received sont affichés avant votre signature
+
+### Approvals
+- Le premier usage d'un token peut nécessiter une approval vers un spender
+- Les approvals sont révocables à tout moment
+- Les approvals sont toujours entre vous, et les contrats standards type 1inch, LiFi, etc.
+- LiSA n'intervient jamais dans ce processus
+
+### Signer et vérifier
+- Votre wallet s'ouvre avec la transaction de swap
+- Après signature, vous voyez le statut dans la queue et un lien explorer
+
+
+
+

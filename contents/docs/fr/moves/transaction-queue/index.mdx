@@ -1,0 +1,30 @@
+---
+title: Transaction queue (TX Queue)
+description: Transaction queue management pour les moves. Relisez et signez les transactions on-chain avant exécution.
+---
+
+Chaque demande dans LiSA est traduite en moves concrets, swap, bridge, send, revoke, qui se résolvent en transactions on chain exactes nécessaires pour l'exécuter. 
+Ces transactions doivent s'enchaîner dans un ordre délibéré. 
+La transaction queue est l'endroit où elles s'alignent pour votre relecture et votre signature, transformant l'intention en exécution, une étape confirmée à la fois.
+
+### Ce que c'est
+- Une liste ordonnée et visible de transactions non signées préparées à partir de votre demande
+- Une intention peut produire une seule transaction ou une chaîne de transactions dépendantes.
+
+### Fonctionnement
+- LiSA séquence toutes les étapes requises et les place dans la queue
+- Vous relisez et signez chaque item dans l'ordre, rien ne s'exécute sans signature
+
+### Signatures et custody
+- Toutes les transactions restent non signées jusqu'à ce que votre wallet vous invite à signer
+- Toutes les signatures sont client side dans votre wallet et ne sont jamais accessibles à LiSA
+- Pas de signature, pas de soumission. Aucun fonds ne bouge sans votre approbation
+- Les fonds ne transitent JAMAIS par LiSA : vous interagissez directement avec les pools, contrats d'agrégateurs, etc.
+
+### Après soumission
+- Le prochain item devient prêt uniquement après la confirmation on chain du précédent
+- Vous obtenez des liens explorer et des statuts pour chaque transaction soumise
+- Vous pouvez interrompre une chaîne de transactions au milieu d'une exécution sans problème, les fonds sont TOUJOURS sur un de vos wallets, mais possiblement sous une forme intermédiaire.
+- Si vous cessez de signer, rien d'autre ne s'exécute
+
+

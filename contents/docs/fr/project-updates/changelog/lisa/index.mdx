@@ -1,0 +1,131 @@
+---
+title: Journal des versions de l'app LiSA
+description: Journal de développement de l'application avec historique des versions, ajouts de fonctionnalités, corrections de bugs, et mises à jour plateforme.
+---
+
+
+
+<Release label="prealpha 0.4" date="Q3 2025" title="Améliorations wallet et UI">
+Vues de portefeuille et soldes, revamp UI pour conversations management
+
+<Version version="0.4.5" title="UI et particules">
+<Added>
+- test d'un avatar en 3d - threejs pour LiSA
+- animations de morphing pour l'avatar en particules
+- onglets multi conversations et sélecteur
+- mise en page du chat pour une meilleure responsivité
+</Added>
+</Version>
+
+<Version version="0.4.1" title="Portefeuille et wallet">
+<Added>
+- composant wallet interactif avec soldes de tokens
+- affichage du wallet avec regroupement par blockchain et détails des tokens
+</Added>
+</Version>
+</Release>
+
+<Release label="prealpha 0.3" date="Q2 2025" title="Transactions avancées">
+Routes et exécution, opérations cross chain, TX queue, enhanced requests, context ...
+
+<Version version="0.3.3" title="Cross chain et correctifs">
+<Added>
+- recentrage des cibles actives sur Ethereum et Avalanche
+- validation des swaps sur une seule blockchain sur les deux réseaux supportés
+- intégration pour le bridging cross chain
+- changement automatique de reseau depuis le wallet quand requis
+- transaction queue 
+</Added>
+<Fixed>
+- bugs de décimales dans les swaps référencés et basés sur un pourcentage
+- affichage du logo de blockchain pour les swaps single chain
+</Fixed>
+</Version>
+
+<Version version="0.3.2" title="Détails des transactions">
+<Added>
+- vérification de l'existence du token avant l'envoi au client
+- vérification des montants de tokens avant transaction
+- détails plus riches avec résultats d'exécution, gas utilisé, et infos DEX
+</Added>
+</Version>
+
+<Version version="0.3.1" title="Capacités avancées">
+<Added>
+- swaps basés sur pourcentage
+- système de références pour opérations multi étapes
+- calculs précis avec BigNumber
+- queue avec indicateurs de référence
+- paramètres en langage naturel et allocation dynamique
+</Added>
+<Fixed>
+- problèmes de précision dans les conversions de montants
+- gestion d'erreurs pour la validation des transactions
+</Fixed>
+</Version>
+</Release>
+
+<Release label="prealpha 0.2" date="Q1 2025" title="Infrastructure de transaction">
+Fondations de la queue, calcul de route et exécution, confirmations.
+
+<Version version="0.2.4" title="Routing côté client">
+<Added>
+- fetching des routes côté client avec LiFi SDK
+- meilleur reporting d'erreurs avec résumés détaillés
+- traitement résilient avec calculs cohérents côté client
+</Added>
+</Version>
+
+<Version version="0.2.3" title="Exécution des routes">
+<Added>
+- exécution réelle on chain via LiFi
+- flow d'approbation du wallet
+- swaps multi tokens séquentiels avec queue
+- suivi de statut et confirmations
+</Added>
+</Version>
+
+<Version version="0.2.2" title="Système de queue">
+<Added>
+- processing de bout en bout de la soumission à la confirmation
+- feedback interactif tout au long du cycle
+- opérations batchées avec rapport récapitulatif
+</Added>
+</Version>
+
+<Version version="0.2.1" title="Mise en place multi chaînes">
+<Added>
+- support des opérations cross chain
+- logique de routage des transactions
+- intégration des providers blockchain
+</Added>
+</Version>
+</Release>
+
+<Release label="prealpha 0.1" date="Q1 2025" title="Fondations et PoC">
+Fondations cœur, backend et intégration agent, faisabilité.
+
+<Version version="0.1.3" title="Architecture frontend">
+<Added>
+- architecture frontend moderne avec gestion d'état
+- interface style terminal pour les interactions avec l'agent
+- visualisation de données et monitoring du système
+</Added>
+</Version>
+
+<Version version="0.1.2" title="Backend et LLM">
+<Added>
+- intégration IA pour opérations financières
+- structured output chained function calls
+- gestion de données validée par schéma
+</Added>
+</Version>
+
+<Version version="0.1.1" title="PoC initial">
+<Added>
+- Proof of Concept
+- exploration de l'authentification
+- validation de la faisabilité technique
+</Added>
+</Version>
+</Release>

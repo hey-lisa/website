@@ -1,0 +1,30 @@
+---
+title: Revoke
+description: Supprimez token approvals et spending permissions. Révoquez accès contract à vos assets pour sécurité.
+---
+
+### Objectif
+- Supprimer des approvals existantes pour réduire le risque.
+- À utiliser pour faire le ménage après avoir testé des apps ou pour durcir un wallet.
+
+### Exemples
+- revoke all approvals on Arbitrum
+- show approvals on Ethereum
+
+### Scan et aperçu
+- LiSA scanne les blockchains supportées pour trouver les approvals sur vos adresses liées.
+- LiSA affiche une liste à relire et vous permet de filtrer par blockchain, asset, ou spender.
+
+### Préparer et mettre en queue
+- LiSA prépare les transactions de revoke et les place dans la queue.
+
+### Sécurité
+- Révoquer ne déplace pas de fonds.
+- Si une approval est nécessaire plus tard, LiSA la demandera à ce moment là.
+
+### Signer et vérifier
+- Votre wallet s'ouvre avec la transaction de revoke.
+- Après signature, vous voyez le statut dans la queue et un lien explorer.
+
+
+

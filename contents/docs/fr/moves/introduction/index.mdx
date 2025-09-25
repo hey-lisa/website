@@ -1,0 +1,21 @@
+---
+title: Introduction
+description: Introduction aux moves LiSA. Transformez les instructions chat en actions on-chain directes sur les networks supportés.
+---
+
+### Interface de chat
+- Dites ce que vous voulez dans le chat
+- LiSA lit l'intention, les tokens, les blockchains, les montants, etc. et discute avec vous s'il manque des infos.
+- LiSA transforme l'intention en une ou plusieurs transactions.
+
+### Demandes complexes
+- Une demande peut enchaîner plusieurs actions, par exemple swap puis bridge
+- Vous pouvez utiliser des % ou des parties pour les montants ("envoie la moitié de mes usdc sur arbitrum, et l'autre moitié sur avalanche")
+- Vous pouvez répartir sur plusieurs blockchains ou destinataires en une seule phrase
+
+### Quotes et signatures
+- Chaque transaction comporte : route, fees, minimum received, une estimation de temps, etc.
+- Rien ne s'exécute tant que vous n'avez pas signé la transaction
+- Si une approval est nécessaire, vous la signez d'abord, puis vous signez l'action
+
+

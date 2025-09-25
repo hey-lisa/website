@@ -1,0 +1,244 @@
+{
+    "metadata": {
+        "title": "Hey LiSA | AI Agent for Web3",
+        "description": "LiSA is a non-custodial AI agent for the web3. Swap, bridge or transfer tokens from the chat. Let LiSA backtest and execute your trading strategy on-chain."
+    },
+    "home": {
+        "main_header": "intelligence for ur wallets. non-custodial.",
+        "get_started": "LiSA ?",
+        "name": "LiSA"
+    },
+    "footer": {
+        "crafted_with": "crafted with",
+        "by": "by"
+    },
+    "navbar": {
+        "links": {
+            "docs": "Docs",
+            "hq": "HQ",
+            "lab": "Lab"
+        }
+    },
+    "docs": {
+        "on_this_page": "On this page",
+        "next": "Next",
+        "previous": "Previous",
+        "home": "Home",
+        "notice": {
+            "title": "dev note",
+            "content": "LiSA is currently in closed alpha development. Documentation reflects planned features and may change. Check our changelog and roadmap for current development status."
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Get in touch",
+        "email_label": "Email",
+        "pgp_section": "PGP Public Key",
+        "copy_button": "Copy PGP Key",
+        "copied": "Copied!",
+        "secure_communication": "For secure communication, use our PGP public key below:"
+    },
+    "not_found": {
+        "404": "404",
+        "page_not_found": "Page not found",
+        "sub_text": "Oops! The page you're looking for doesn't exist.",
+        "back_to_homepage": "homepage"
+    },
+    "leftbar": {
+        "introduction": "Introduction",
+        "lisa": "LiSA ?",
+        "what_you_can_do": "What You Can Do",
+        "lisa_token_overview": "Token",
+        "security": "Security",
+        "start_here": "Start Here",
+        "requirements": "Requirements",
+        "connect": "Connect",
+        "first_actions": "First Actions",
+        "transaction_queue": "Transaction Queue",
+        "how_it_works": "How It Works",
+        "trading_engine": "Trading Engine",
+        "token_and_contracts": "Token and Contracts",
+        "intent_to_strategy_spec": "Intent to Strategy Spec",
+        "intent_to_transactions": "Intent to Transactions",
+        "accounts": "Accounts",
+        "linked_addresses": "Linked Addresses",
+        "balances_and_positions": "Balances and Positions",
+        "approvals": "Approvals",
+        "recipient_policy": "Recipient Policy",
+        "moves": "Moves",
+        "moves_introduction": "Introduction",
+        "send": "Send",
+        "swap": "Swap",
+        "bridge": "Bridge",
+        "revoke": "Revoke",
+        "moves_transaction_queue": "Transaction Queue",
+        "strategies": "Strategies",
+        "strategies_overview": "Overview",
+        "authoring": "Authoring",
+        "backtesting": "Backtesting",
+        "run_and_monitor": "Run and Monitor",
+        "strategies_hub": "Strategies Hub",
+        "where_it_runs_and_funding": "Where It Runs and Funding",
+        "chains_and_tokens": "Chains and Tokens",
+        "networks": "Networks",
+        "tokens": "Tokens",
+        "lisa_token": "$LiSA (ERC-20)",
+        "summary": "Summary",
+        "status": "Status",
+        "access": "Access",
+        "locks": "Locks",
+        "splits": "Splits",
+        "fees_and_penalties": "Fees and Penalties",
+        "project_updates": "Project Updates",
+        "changelog": "Changelog",
+        "lisa_changelog": "LiSA",
+        "website_changelog": "Website",
+        "roadmap": "Roadmap"
+    },
+    "blog": {
+        "title": "HQ",
+        "sub_title": "All the latest transmissions and updates from LiSA.",
+        "meta_title": "HQ | Hey LiSA",
+        "meta_description": "News from the LiSA team. Follow our development journey, product releases, technical deep-dives, and thoughts on building the future of non-custodial Web3 AI.",
+        "published_on": "Published on",
+        "back_to_blog": "Back to HQ",
+        "posted_by": "Posted by"
+    },
+    "lab": {
+        "title": "Lab | Hey LiSA",
+        "description": "Explore experimental projects and tools from LiSA's research labs. Discover on-chain archaeology, prototype trading interfaces, and cutting-edge Web3 experiments.",
+        "coming_soon": "coming soon",
+        "open_app": "open app",
+        "close": "×",
+        "projects": {
+            "tales_from_mines": {
+                "title": "Tales from the Mines",
+                "subtitle": "On-chain archaeology",
+                "description": "On-chain archaeology for the curious. Dig through old blocks, surface forgotten signals, and publish narrative notes, datasets, and tiny code artifacts.",
+                "tags": ["website", "bitcoin", "research"]
+            },
+            "lisa": {
+                "title": "[LiSA]",
+                "subtitle": "Intelligence for ur wallets",
+                "description": "Swaps, bridges, and transfers on any EVM blockchain, from chatting with LiSA. Natural language to complex DCA, invest, and trading strategies enforced on-chain and on Hyperliquid.",
+                "token_line": "$LISA powers access and incentives.",
+                "tags": ["$LISA", "dApp", "Agent"]
+            },
+            "jensoo": {
+                "title": "Jensoo AI",
+                "subtitle": "Quorum whispers",
+                "description": "Pose a query. A quorum of models and research tools convene; two agents orchestrate the debate. The verdict can be sealed, hashed, and pinned to uncensorable storage (e.g., OP_RETURN, IPFS). Paid in $LISA.",
+                "tags": ["$LISA", "dApp", "Agent"]
+            },
+            "pokpak": {
+                "title": "0xPokPak",
+                "subtitle": "Solidity security agent",
+                "description": "An audit agent fed with Solidity security lore: known exploits, patterns, and war stories. Run targeted checks, generate diffs, and export findings. Paid in $LISA.",
+                "tags": ["$LISA", "dApp", "Agent"]
+            }
+        },
+        "modal": {
+            "title": "[LiSA]",
+            "subtitle": "intelligence for ur wallet",
+            "description": "LiSA is currently in closed alpha development. Access is limited while we refine core features. Check our documentation, changelog, and roadmap for updates. Leave your email below to follow future developments.",
+            "features": {
+                "mobility": {
+                    "title": "Web3 ultra mobility",
+                    "description": "Swaps, bridges, and transfers across EVM, directly from chat."
+                },
+                "invest": {
+                    "title": "Invest smartly", 
+                    "description": "Natural language to investment strategies enforced on-chain."
+                },
+                "trading": {
+                    "title": "Trading with AI",
+                    "description": "Natural language to strategies enforced on Hyperliquid and GMX."
+                },
+                "portfolio": {
+                    "title": "Portfolio oversight",
+                    "description": "Manage DeFi positions, track balances, and get notifications on price, news, and custom triggers."
+                },
+                "custody": {
+                    "title": "100% non custodial", 
+                    "description": "Your keys, your funds. LiSA never holds or controls your assets."
+                },
+                "token": {
+                    "title": "$LISA Token",
+                    "description": "ERC-20 on Ethereum. Required for LiSA dApp access and services like Jensoo AI or 0xPokPak. Fair launch date to be announced. Subscribe for news."
+                }
+            },
+            "form": {
+                "prompt": "<LiSA> drop ur email for dev updates",
+                "placeholder": "email@domain.com",
+                "success": "<LiSA> email noted! we'll ping u on updates (u can also follow on X)",
+                "error": "Please enter a valid email address.",
+                "rate_limited": "Please wait a moment before submitting again."
+            }
+        }
+    },
+    "error": {
+        "oops": "Oops!",
+        "something_went_wrong": "Something went wrong.",
+        "sub_text": "We're sorry, but an error occurred while processing your request.",
+        "reload_page": "Reload Page",
+        "back_to_homepage": "Back to homepage"
+    },
+    "diagrams": {
+        "transaction_flow": {
+            "user_chats_with_lisa": "💬 CHATS WITH\nLISA",
+            "user_examines_txs": "👁️ EXAMINES\nTXS",
+            "user_signs_txs": "✍️ SIGNS\nTXS",
+            "user_tx_confirmed": "📡 TX\nCONFIRMED",
+            "user": "USER",
+            "lisa_verifications": "🔍 VERIFICATIONS\n& CONTEXT",
+            "lisa_parsing": "🧠 PARSING\nINTENT",
+            "lisa_crafting": "⚙️ CRAFTING\nTX",
+            "lisa_tx_ready": "✅ TX READY",
+            "lisa": "🤖 LISA",
+            "frontend": "FRONTEND",
+            "backend": "BACKEND",
+            "aggregators": "📡 AGGREGATORS",
+            "smart_contracts": "⛓️ SMART\nCONTRACTS",
+            "nl_request": "NL Request",
+            "unsigned_transactions": "Unsigned Transactions",
+            "requests": "Requests",
+            "quotes_routes": "Quotes/Routes",
+            "execute_txs": "Execute TXs",
+            "tx_confirmed": "TX Confirmed"
+        },
+        "intent_to_strategy": {
+            "user_chat_with_lisa": "USER\nChat with LISA",
+            "user_describe_strategy": "USER\nDescribe Strategy",
+            "user_strategy_received": "USER\nStrategy Received",
+            "user": "USER",
+            "lisa_chat_with_user": "LISA\nChat with User",
+            "lisa_validates_strategy": "LISA\nValidates Strategy",
+            "lisa_contacting_agent": "LISA\nContacting Agent",
+            "lisa_adds_to_hub": "LISA\nAdds to Hub",
+            "lisa": "LISA",
+            "strategy_hub": "STRATEGY HUB",
+            "description": "Description",
+            "strategy_ready": "Strategy Ready",
+            "request": "Request",
+            "strategy_spec": "Strategy Spec",
+            "adding_strategy": "Adding Strategy"
+        },
+        "strategy_execution": {
+            "trading_engine": "🤖 TRADING\nENGINE",
+            "analyzing_data": "📊 ANALYZING\nDATA",
+            "requesting_strategy": "❓ REQUESTING\nSTRATEGY",
+            "receiving_strategy": "📋 RECEIVING\nSTRATEGY",
+            "decision_taking": "🎯 DECISION\nTAKING",
+            "placing_order": "📤 PLACING\nORDER",
+            "order_sent": "✅ ORDER\nSENT",
+            "oracle_market_data": "📊 ORACLE\n",
+            "strategy_rules_params": "📋 STRATEGY\n(Rules & Params)",
+            "hyperliquid_trade_execution": "🏦 HYPERLIQUID\n(Trade Execution)",
+            "hyperliquid_executing_trades": "⚡ HYPERLIQUID\n(Executing Trades)",
+            "market_data": "Market Data",
+            "request_strategy": "Request Strategy",
+            "strategy_rules": "Strategy Rules",
+            "place_order": "Place Order"
+        }
+    }
+}

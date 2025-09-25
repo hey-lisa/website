@@ -1,0 +1,18 @@
+---
+title: De l'intention aux transactions
+description: Pipeline de traitement des instructions du chat vers les transactions prêtes pour le wallet. Analyse d'intention et génération de transactions.
+---
+
+<TransactionFlowDiagram />
+
+### Flow
+- Vous demandez à LiSA d'effectuer un move onchain
+- LiSA discute avec vous pour obtenir toutes les infos nécessaires (si besoin)
+- Après diverses vérifications (format d'adresse, recipient policy, adresses liées, checks de base sur les tokens, solde, etc.)
+- LiSA prépare les transactions, auprès d'agrégateurs et bridges
+- Les transactions vous sont renvoyées dans un ordre délibéré, unsigned
+- Vous examinez les tx, et les signez en séquence
+- Après chaque signature, une fois une transaction confirmée, la suivante devient prête à être signée
+
+
+

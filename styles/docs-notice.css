@@ -1,0 +1,25 @@
+
+.chg-notice {
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--foreground);
+  margin: 36px 0 48px 0;
+  padding: 24px 28px;
+  border: 1px dashed var(--border-dark);
+  background: var(--bg-overlay-medium);
+  border-radius: var(--radius);
+  box-shadow: 0 0 8px 2px var(--lisa-green-subtle); 
+}
+
+.chg-notice h3 {
+  color: var(--lisa-green);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.chg-notice p {
+  color: var(--foreground);
+  margin-bottom: 0;
+}

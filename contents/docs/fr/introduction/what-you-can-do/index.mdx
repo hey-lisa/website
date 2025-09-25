@@ -1,0 +1,45 @@
+---
+title: Ce que vous pouvez faire
+description: Capacités principales de LiSA incluant swap/transfers token, cross-chain bridges, trading strategies automatisées, et gestion de portfolio.
+---
+
+### Demander dans le chat
+- Toutes les interactions avec nos outils se font en langage naturel.
+- Demandez à LiSA ce que vous voulez : LiSA le transforme en une ou plusieurs transactions que vous relisez et signez.
+- Discutez avec LiSA de votre stratégie d'investissement ou de trading
+- LiSA exécute vos demandes
+
+Les capacités de LiSA sont regroupées en 2 thèmes : les moves et les stratégies.
+
+### Moves
+- Les moves sont tout ce qui est mouvements on-chain : swap, bridge, transfers, etc.
+- Swap : échanger un token contre un autre sur la même blockchain. 
+- Bridge : déplacer des assets entre blockchains. 
+- Send : transférer des tokens vers une autre adresse sur une blockchain choisie. 
+- Plusieurs autres moves : Refuel (obtenir du native gas), revoke (annuler des approvals de tokens)
+- Les moves peuvent être combinés en 1 seule requête.
+
+### Stratégies
+- Par stratégies nous entendons : plans de trading, toute sorte de DCA (du + simple au + complexe), tous les plans de rebalancing, etc. 
+- Vous fournissez les stratégies dans le chat.
+- LiSA (entre autres) transforme cette stratégie en un plan exécutable par notre trading engine. 
+- Les stratégies peuvent être exécutées on-chain (via nos vault), ou sur hyperliquid (via API).
+- Vous gardez 100% la pleine custody de vos fonds.
+- Le backtesting permet de simuler sur des données historiques n'importe quelle stratégie, avant de lancer en live.
+- Les stratégies peuvent être privées ou publiques.
+
+
+### Exemples
+- Move basique :
+Bridge 100 USDC d'Ethereum vers Arbitrum
+- Move complexe :
+Vends 1 ETH contre des USDC, envoie 50% sur Arbitrum, et l'autre moitié vers 0x1234... sur Avalanche
+- Stratégie basique :
+Je veux acheter 30$ de bitcoin tous les jours à la même heure
+- Stratégie enhanced DCA :
+Achète 50$ de BTC tous les jours, double à 100$ quand le prix baisse de plus de 10% en 24h
+- Stratégie DCA évoluée :
+Acheter 30 USDC de BTC tous les jours à 09:00, doubler à 60 USDC si le prix a chuté de plus de 10% dans les dernières 24 heures, plafonner le budget hebdomadaire à 250 USDC, ne fais rien si le RSI 14 est au-dessus de 70
+- Stratégie de trading avancée :
+Sur toutes les paires, prendre une position long quand EMA 50 est > EMA 200 et que le RSI 14 croise 40 vers le haut, stop loss à 1,5 fois l'ATR 14 (risque = 2% / trade), take profit a 2 risk reward, maximum 1 entrée. Prendre une position courte sur l'opposé.
+

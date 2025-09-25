@@ -1,0 +1,31 @@
+---
+title: Premières actions
+description: Premiers pas après connexion à LiSA. Opérations wallet de base, introduction à l'interface chat, et setup initial.
+---
+
+### Votre Premier "Move" : de l'intention à la transaction
+- Dites ce que vous voulez dans le chat
+- Par exemple : swap 1 ETH vers USDC sur Arbitrum.
+- LiSA analyse votre demande, prépare et vous envoie une ou plusieurs transactions à signer.
+- Vous consultez les détails : route employée, fees, minimum received, etc. 
+- Vous signez la ou les transactions.
+
+### Stratégies de trading, de l'idée au live
+- Décrivez le plan dans le chat.
+- Par exemple : je souhaite acheter 30$ de bitcoin tous les jours que dieu fait !
+- Par exemple2 : Acheter 30 USDC de BTC tous les jours à 09:00, doubler à 60 USDC si le prix a chuté de plus de 10% dans les dernières 24 heures, plafonner le budget hebdomadaire à 250 USDC, passer si le RSI 14 est au-dessus de 70
+- Par exemple3 : Sur toutes les paires, prendre une position long quand EMA 50 est > EMA 200 et que le RSI 14 croise 40 vers le haut, stop loss à 1,5 fois l'ATR 14 (risque = 2% / trade), take profit a 2 risk reward, maximum 1 entrée. Prendre une position courte sur l'opposé.
+- LiSA s'occupe alors de compiler votre stratégie en langage machine, directement exécutable par notre moteur de trading.
+- Vous accédez alors aux résultats de backtest (exécution de la stratégie sur des données historiques) et aux options d'exécution pour le live trading.
+- Enfin vous pouvez lancer votre stratégie (on-chain, ou via l'API d'hyperliquid)
+- Au quotidien : vous suivez votre portfolio, vos trades, etc. et vous pouvez mettre en pause ou éditer votre stratégie.
+- LiSA peut vous envoyer programmatiquement des rapports quotidiens etc.
+
+### Options / Settings 
+- Options de profile : pour joindre plusieurs de vos adresses sous le même compte
+- API key
+- Options de mémoire
+- etc.
+
+
+

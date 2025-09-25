@@ -1,0 +1,44 @@
+---
+title: What You Can Do
+description: Core capabilities of LiSA including token operations, cross-chain bridges, automated trading strategies, and portfolio management.
+---
+
+### Ask in chat
+- All interactions with our tools are done in natural language.
+- Ask LiSA what you want: LiSA transforms it into one or more transactions that you review and sign.
+- Discuss your investment or trading strategy with LiSA
+- LiSA executes your requests
+
+LiSA's capabilities are grouped into 2 themes: moves and strategies.
+
+### Moves
+- Moves are everything that is on-chain movements: swap, bridge, transfers, etc.
+- Swap: exchange one token for another on the same chain.
+- Bridge: move assets between chains.
+- Send: transfer tokens to another address on a chosen chain.
+- Several other moves: Refuel (get native gas), revoke (cancel token approvals)
+- Moves can be combined in 1 single request.
+
+### Strategies
+- By strategies we mean: trading plans, any kind of DCA (from the simplest to the most complex), all rebalancing plans, etc.
+- You provide strategies in the chat.
+- LiSA (among others) transforms this strategy into a plan executable by our trading engine.
+- Strategies can be executed on-chain (via our vault), or on hyperliquid (via API).
+- You keep 100% full custody of your funds.
+- Backtesting allows you to simulate any strategy on historical data, before launching live.
+- Strategies can be private or public.
+
+
+### Examples
+- Basic move:
+Bridge 100 USDC from Ethereum to Arbitrum
+- Complex move:
+Sell 1 ETH for USDC, send 50% to Arbitrum, and the other half to 0x1234... on Avalanche
+- Basic strategy:
+I want to buy $30 of bitcoin every day at the same time
+- Enhanced DCA strategy:
+Buy $50 of BTC every day, double to $100 when the price drops more than 10% in 24h
+- Advanced DCA strategy:
+Buy 30 USDC of BTC every day at 09:00, double to 60 USDC if price fell more than 10% in the last 24 hours, cap weekly budget at 250 USDC, do nothing if RSI 14 is above 70
+- Advanced trading strategy:
+On all pairs, take a long position when EMA 50 is > EMA 200 and RSI 14 crosses 40 upward, stop loss at 1.5 times ATR 14 (risk = 2% / trade), take profit at 2 risk reward, maximum 1 entry. Take a short position on the opposite.

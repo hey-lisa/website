@@ -1,0 +1,15 @@
+---
+title: Where? Security?
+description: Strategy execution environments. Hyperliquid integration and on-chain execution options.
+---
+
+### Hyperliquid
+- Uses your account via API.
+- LiSA places orders. Keys remain with you.
+
+### On chain
+- Uses our on-chain vaults.
+- Your funds are in a contract on which LiSA can act in a limited and controlled way.
+- LiSA (which owns a wallet) places swaps, but cannot withdraw()
+- The vault is coded so that even if LiSA's wallet were under control of a malicious actor, your funds would remain secure.
+- The only way for a malicious actor to access your funds is if your own wallet were compromised.

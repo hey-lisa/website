@@ -1,0 +1,18 @@
+---
+title: Security
+description: Security architecture, non-custodial principles, and threat model. 
+---
+
+### Security
+- 100% of our solutions are non-custodial
+- This means that LiSA never holds funds and never moves tokens alone.
+
+### Security associated with "moves"
+- Each action is a transaction prepared by LiSA that YOU sign.
+- These are standard (and verifiable) transactions interacting with known and recognized contracts from aggregators and liquidity pools like LiFi, 1inch, Aave..
+- You are always the signer and your keys never leave your wallet.
+
+### Security associated with strategies:
+- Our trading engine is connected to your funds but neither LiSA nor the team ever has any means to withdraw.
+- On Hyperliquid: the API key rights do not include withdrawal.
+- On-chain: your funds are on a contract (vault). Neither LiSA nor the team owns the rights to execute the withdraw() function on vaults, LiSA can only swap on your behalf on pre-whitelisted pools (Uniswap etc.)

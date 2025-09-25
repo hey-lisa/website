@@ -1,0 +1,210 @@
+
+@import url("./logo.css");
+@import url("./links.css");
+@import url("./active-links.css");
+@import url("./buttons.css");
+@import url("./404.css");
+@import url("./lab-flipcards.css");
+@import url("./lab-animations.css");
+@import url("./lisa-modal.css");
+@import url("./footer.css");
+@import url("./docs-notice.css");
+@import url("./components/roadmap.css");
+@import url("./components/changelog.css");
+
+.header-border {
+  border-bottom: 1px solid var(--border-dark);
+}
+
+
+:root {
+  font-variant-ligatures: none;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: rgba(11, 11, 11, 1);
+    --foreground: rgba(230, 230, 230, 1);
+    --primary: rgba(250, 250, 249, 1);
+    --primary-foreground: rgba(28, 25, 23, 1);
+    --radius: 0.5rem;               
+    --lisa-green: rgba(167, 243, 208, 0.9);
+    --lisa-green-glow: rgba(167, 243, 208, 0.6);
+    --lisa-green-subtle: rgba(167, 243, 208, 0.3);
+    --accent: rgba(247, 154, 175, 1);
+    
+    --border-dark: #1A1A1A;
+    --white-60: rgba(250, 250, 249, 0.6);    
+    
+    --bg-overlay-dark: rgba(0, 0, 0, 0.7);
+    --bg-overlay-medium: rgba(0, 0, 0, 0.4);
+    
+    --diagram-edge: var(--lisa-green);                    
+    --diagram-edge-bg: rgba(11, 11, 11, 0.8);            
+    --diagram-bg: rgba(11, 11, 11, 0.6);                  
+    --diagram-text: var(--foreground);                    
+    
+    --green-changelog: var(--lisa-green);
+    --green-version: var(--lisa-green-glow);
+    --green-title: var(--lisa-green);
+    --dashed-border: var(--lisa-green-subtle);
+    --modal-bg: rgba(0, 0, 0, 0.45);
+    
+    --status-blue: rgba(147, 197, 253, 0.8);      
+    --status-orange: rgba(251, 191, 36, 0.8);       
+    --status-green: var(--lisa-green);            
+    --status-red: rgba(248, 113, 113, 0.8);      
+    --status-purple: rgba(196, 181, 253, 0.8);    
+    --status-gray: rgba(156, 163, 175, 0.8);      
+    --status-pink: rgba(249, 168, 212, 0.8);      
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-700;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
+
+.prose {
+  margin: 0 !important;
+}
+
+pre {
+  padding: 2px 0 !important;
+  width: inherit !important;
+  overflow-x: auto;
+}
+
+pre > code {
+  display: grid;
+  max-width: inherit !important;
+  padding: 14px 0 !important;
+}
+
+.code-line {
+  padding: 0.75px 16px;
+  @apply border-l-2 border-transparent;
+}
+
+.line-number::before {
+  display: inline-block;
+  width: 1rem;
+  margin-right: 22px;
+  margin-left: -2px;
+  color: rgb(110, 110, 110);
+  content: attr(line);
+  font-size: 13.5px;
+  text-align: right;
+}
+
+.highlight-line {
+  background-color: rgba(250, 250, 249, 0.05);
+  border-left: 2px solid rgba(250, 250, 249, 0.30);
+}
+
+.rehype-code-title {
+  @apply px-2 -mb-8 w-full text-sm pb-5 font-medium mt-5 font-code;
+}
+
+.highlight-comp > code {
+  background-color: transparent !important;
+}
+
+:root {
+  --scrollbar-thumb: rgba(
+    160,
+    160,
+    160,
+    0.4
+  ); 
+}
+
+* {
+  scrollbar-width: thin; 
+  scrollbar-color: var(--scrollbar-thumb) transparent; 
+}
+
+*::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px; 
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb); 
+  border-radius: 9999px; 
+  border: 2px solid transparent; 
+  background-clip: content-box; 
+}
+
+*::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+.flip-card-container {
+  perspective: 1000px;
+  height: 520px; 
+}
+
+.flip-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card-container:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  overflow: visible; 
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+
+.blog-card-hover {
+  max-width: 320px; 
+  margin-left: auto;
+  margin-right: auto;
+  aspect-ratio: 2/3; 
+  transition: all 0.3s ease; 
+}
+
+.blog-card-hover:hover {
+  animation: blog-card-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes blog-card-pulse {
+  0%, 100% {
+    border-color: var(--lisa-green-subtle); 
+    box-shadow: 
+      0 0 8px var(--lisa-green-glow), 
+      0 0 16px var(--lisa-green-glow);
+  }
+  50% {
+    border-color: var(--lisa-green-glow); 
+    box-shadow: 
+      0 0 16px var(--lisa-green-subtle), 
+      0 0 32px var(--lisa-green-glow); 
+  }
+}
+

@@ -1,0 +1,19 @@
+---
+title: Trading Engine
+description: Strategy execution engine that processes compiled specs against live market data. Real-time trade execution system.
+---
+
+<StrategyExecutionDiagram />
+
+### Model
+- Deterministic evaluation on a fixed tick, hourly by default.
+- Reads market candles from internal oracle
+- Emits actions to the chosen adapter and records fills, positions, and PnL.
+
+### Execution channel
+- For Hyperliquid: LiSA places and monitors orders via your account's API.
+- For vault strategies: funds are in the vault, on which LiSA has trading capabilities
+- LiSA can swap assets by interacting with whitelisted pools and tokens
+
+### Security
+- In both cases: LiSA is unable to withdraw your funds

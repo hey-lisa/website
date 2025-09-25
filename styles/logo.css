@@ -1,0 +1,31 @@
+.blink {
+  animation: blink 1.2s infinite step-start;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.lisa-logo {
+  text-shadow: 0 0 6px var(--lisa-green-glow);
+}
+
+.lisa-logo .bracket {
+  color: var(--accent);
+  transition: color 0.3s ease;
+  text-shadow: 0 0 6px var(--lisa-green-glow);
+}
+
+.lisa-logo .text {
+  color: var(--lisa-green);
+  text-shadow: 0 0 6px var(--lisa-green-glow);
+}
+
+.lisa-logo .cursor {
+  color: var(--lisa-green);
+  text-shadow: 0 0 6px var(--lisa-green-glow);
+}
+
+.lisa-logo:hover .bracket {
+  color: var(--lisa-green);
+}

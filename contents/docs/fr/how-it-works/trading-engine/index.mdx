@@ -1,0 +1,20 @@
+---
+title: Moteur de trading
+description: Moteur d'exécution des strategies qui traite les specs compilées contre les données de marché live. Système d'exécution de trades en temps réel.
+---
+
+<StrategyExecutionDiagram />
+
+### Modèle
+- Évaluation déterministe sur un tick fixe, horaire par défaut.
+- Lit les chandelles de marché depuis l'oracle interne
+- Émet des actions vers l'adaptateur choisi et enregistre fills, positions, et PnL.
+
+### Exécution channel
+- Pour Hyperliquid : LiSA place et surveille les ordres via l'API de votre compte.
+- Pour les stratégies vault : les fonds sont dans le vault, sur lequel LiSA a des capacités de trading
+- LiSA peut swap des assets en interagissant avec des pools et tokens whitelistés
+
+### Sécurité 
+- Dans les 2 cas : LiSA est dans l'incapacité de withdraw vos fonds
+

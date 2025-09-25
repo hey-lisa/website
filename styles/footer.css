@@ -1,0 +1,23 @@
+.heart {
+  color: var(--accent);
+  display: inline-block;
+  text-shadow: 
+    0 0 4px var(--accent),
+    0 0 10px var(--accent);
+  animation: heartbeat 1.6s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+    filter: saturate(1);
+  }
+  25% {
+    transform: scale(1.12);
+    filter: saturate(1.5);
+  }
+  50% {
+    transform: scale(1.06);
+    filter: saturate(1.3);
+  }
+}

@@ -1,0 +1,244 @@
+{
+    "metadata": {
+        "title": "Hey LiSA | Agent IA pour le Web3",
+        "description": "LiSA est un agent IA non-custodial pour le web3. Échangez, bridgez ou transférez des tokens depuis le chat. Laissez LiSA backtester et exécuter votre stratégie de trading on-chain."
+    },
+    "home": {
+        "main_header": "intelligence pour vos wallets. non-custodial.",
+        "get_started": "LiSA ?",
+        "name": "LiSA"
+    },
+    "footer": {
+        "crafted_with": "crafté avec",
+        "by": "par"
+    },
+    "navbar": {
+        "links": {
+            "docs": "Docs",
+            "hq": "QG",
+            "lab": "Labo"
+        }
+    },
+    "docs": {
+        "on_this_page": "Sur cette page",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "home": "Accueil",
+        "notice": {
+            "title": "dev note",
+            "content": "LiSA est actuellement en développement (closed alphra). La documentation reflète les fonctionnalités prévues et peut changer. Consultez notre changelog et roadmap pour l'état actuel du développement."
+        }
+    },
+    "contact": {
+        "title": "Contact",
+        "description": "Contactez-nous",
+        "email_label": "Email",
+        "pgp_section": "Clé publique PGP",
+        "copy_button": "Copier la clé PGP",
+        "copied": "Copié !",
+        "secure_communication": "Pour une communication sécurisée, utilisez notre clé publique PGP ci-dessous :"
+    },
+    "not_found": {
+        "404": "404",
+        "page_not_found": "Page non trouvée",
+        "sub_text": "Oups ! La page que vous recherchez n'existe pas.",
+        "back_to_homepage": "page d'accueil"
+    },
+    "leftbar": {
+        "introduction": "Introduction",
+        "lisa": "LiSA ?",
+        "what_you_can_do": "Ce que vous pouvez faire",
+        "lisa_token_overview": "Token",
+        "security": "Sécurité",
+        "start_here": "Commencer ici",
+        "requirements": "Prérequis",
+        "connect": "Se connecter",
+        "first_actions": "Premières actions",
+        "transaction_queue": "Transaction Queue",
+        "how_it_works": "Comment ça marche",
+        "trading_engine": "Moteur de trading",
+        "token_and_contracts": "Token et contrats",
+        "intent_to_strategy_spec": "Intention vers spéc de stratégie",
+        "intent_to_transactions": "Intention vers transactions",
+        "accounts": "Comptes",
+        "linked_addresses": "Adresses liées",
+        "balances_and_positions": "Soldes et positions",
+        "approvals": "Approvals",
+        "recipient_policy": "Recipient Policy",
+        "moves": "Mouvements",
+        "moves_introduction": "Introduction",
+        "send": "Envoyer",
+        "swap": "Swap",
+        "bridge": "Bridge",
+        "revoke": "Revoke",
+        "moves_transaction_queue": "TX Queue",
+        "strategies": "Stratégies",
+        "strategies_overview": "Aperçu",
+        "authoring": "Création",
+        "backtesting": "Test rétroactif",
+        "run_and_monitor": "Exécuter et surveiller",
+        "strategies_hub": "Hub de stratégies",
+        "where_it_runs_and_funding": "Où ça fonctionne et financement",
+        "chains_and_tokens": "Chaînes et tokens",
+        "networks": "Réseaux",
+        "tokens": "Tokens",
+        "lisa_token": "$LiSA (ERC-20)",
+        "summary": "Résumé",
+        "status": "Statut",
+        "access": "Accès",
+        "locks": "Locks",
+        "splits": "Divisions",
+        "fees_and_penalties": "Fees et pénalités",
+        "project_updates": "Mises à jour du projet",
+        "changelog": "Journal des modifications",
+        "lisa_changelog": "LiSA",
+        "website_changelog": "Site web",
+        "roadmap": "Feuille de route"
+    },
+    "blog": {
+        "title": "QG",
+        "sub_title": "Toutes les dernières transmissions et mises à jour de LiSA.",
+        "meta_title": "QG | Hey LiSA",
+        "meta_description": "News de l'équipe LiSA. Suivez le développement, sorties, analyses techniques, et réflexions sur la construction de l'IA Web3 non-custodial.",
+        "published_on": "Publié le",
+        "back_to_blog": "Retour au QG",
+        "posted_by": "Publié par"
+    },
+    "lab": {
+        "title": "Lab | Hey LiSA",
+        "description": "Explorez les projets expérimentaux et outils des laboratoires de recherche LiSA. Découvrez l'archéologie on-chain, interfaces de trading prototype, et expériences Web3 avant-gardistes.",
+        "coming_soon": "bientôt dispo",
+        "open_app": "ouvrir l'app",
+        "close": "×",
+        "projects": {
+            "tales_from_mines": {
+                "title": "Tales from the Mines",
+                "subtitle": "Archéologie on-chain",
+                "description": "Archéologie on-chain pour les curieux. Signaux oubliés, notes narratives, artefacts de code. Excavation de secrets enfouis au coeur des blocs.",
+                "tags": ["site web", "bitcoin", "recherche"]
+            },
+            "lisa": {
+                "title": "[LiSA]",
+                "subtitle": "Intelligence pour vos wallets",
+                "description": "Swaps, bridges, transfers, sur toute blockchain EVM, en discutant avec LiSA. Du langage naturel vers des stratégies de trading complexes, exécutées on-chain et sur Hyperliquid.",
+                "token_line": "$LISA alimente l'accès et les incitations.",
+                "tags": ["$LISA", "dApp", "Agent"]
+            },
+            "jensoo": {
+                "title": "Jensoo AI",
+                "subtitle": "Chuchotements de quorum",
+                "description": "Le resultat peut être publie sur supports incensurables (ex. OP_RETURN, IPFS). Payé en $LISA.",
+                "tags": ["$LISA", "dApp", "Agent"]
+            },
+            "pokpak": {
+                "title": "0xPokPak",
+                "subtitle": "Agent de sécurité Solidity",
+                "description": "Un agent d'audit de sécurité Solidity : exploits connus, patterns, et récits de guerre. Exécutez des vérifications ciblées, générez des diffs, et exportez les résultats. Payé en $LISA.",
+                "tags": ["$LISA", "dApp", "Agent"]
+            }
+        },
+        "modal": {
+            "title": "[LiSA]",
+                "subtitle": "intelligence pour vos wallet",
+            "description": "LiSA est actuellement en développement alpha fermé. L'accès est limité pendant que nous affinons les fonctionnalités principales. Consultez notre documentation, changelog, et roadmap pour les mises à jour. Laissez votre email ci-dessous pour suivre les développements futurs.",
+            "features": {
+                "mobility": {
+                    "title": "Ultra mobilité Web3",
+                    "description": "swaps, bridges, transfers sur toutes les blockchains EVM, directement depuis le chat."
+                },
+                "invest": {
+                    "title": "Investir intelligemment", 
+                    "description": "Langage naturel vers stratégies d'investissement appliquées on-chain."
+                },
+                "trading": {
+                    "title": "Trading avec l'IA",
+                    "description": "Langage naturel vers stratégies appliquées sur Hyperliquid et On-chain."
+                },
+                "portfolio": {
+                    "title": "Supervision de wallet",
+                    "description": "Gérez les positions DeFi, suivez les soldes, et recevez des notifications sur les prix, actualités, et déclencheurs custom."
+                },
+                "custody": {
+                    "title": "100% non-custodial", 
+                    "description": "Vos clés, vos fonds. LiSA ne détient ni ne contrôle jamais vos actifs."
+                },
+                "token": {
+                    "title": "Token $LISA",
+                    "description": "ERC-20 sur Ethereum. Requis pour l'accès à la dApp LiSA et les services comme Jensoo AI ou 0xPokPak. Date du fair launch à annoncer."
+                }
+            },
+            "form": {
+                "prompt": "<LiSA> laisse ton email pour les mises à jour dev",
+                "placeholder": "email@domaine.com",
+                "success": "<LiSA> email noté ! Nous vous enverrons qq nouvelles (aussi : follow on X)",
+                "error": "Veuillez saisir une adresse email valide.",
+                "rate_limited": "Veuillez attendre un moment avant de soumettre à nouveau."
+            }
+        }
+    },
+    "error": {
+        "oops": "Oups !",
+        "something_went_wrong": "Quelque chose s'est mal passé.",
+        "sub_text": "Nous sommes désolés, une erreur s'est produite lors du traitement de votre demande.",
+        "reload_page": "Recharger la page",
+        "back_to_homepage": "Retour à la page d'accueil"
+    },
+    "diagrams": {
+        "transaction_flow": {
+            "user_chats_with_lisa": "💬 DISCUTE AVEC\nLISA",
+            "user_examines_txs": "👁️ EXAMINE\nTXS",
+            "user_signs_txs": "✍️ SIGNE\nTXS",
+            "user_tx_confirmed": "📡 TX\nCONFIRMÉE",
+            "user": "UTILISATEUR",
+            "lisa_verifications": "🔍 VÉRIFICATIONS\n& CONTEXTE",
+            "lisa_parsing": "🧠 ANALYSE\nINTENTION",
+            "lisa_crafting": "⚙️ CRÉATION\nTX",
+            "lisa_tx_ready": "✅ TX PRÊTE",
+            "lisa": "🤖 LISA",
+            "frontend": "FRONTEND",
+            "backend": "BACKEND",
+            "aggregators": "📡 AGRÉGATEURS",
+            "smart_contracts": "⛓️ SMART\nCONTRACT",
+            "nl_request": "Requête en LN",
+            "unsigned_transactions": "Transactions non signées",
+            "requests": "Requêtes",
+            "quotes_routes": "Quote/Routes",
+            "execute_txs": "Exécuter TXs",
+            "tx_confirmed": "TX Confirmée"
+        },
+        "intent_to_strategy": {
+            "user_chat_with_lisa": "UTILISATEUR\nDiscute avec LISA",
+            "user_describe_strategy": "UTILISATEUR\nDécrit Stratégie",
+            "user_strategy_received": "UTILISATEUR\nStratégie Reçue",
+            "user": "UTILISATEUR",
+            "lisa_chat_with_user": "LISA\nDiscute avec Utilisateur",
+            "lisa_validates_strategy": "LISA\nValide Stratégie",
+            "lisa_contacting_agent": "LISA\nContacte Agent",
+            "lisa_adds_to_hub": "LISA\nAjoute au Hub",
+            "lisa": "LISA",
+            "strategy_hub": "HUB STRATÉGIES",
+            "description": "Description",
+            "strategy_ready": "Stratégie Prête",
+            "request": "Requête",
+            "strategy_spec": "Spec Stratégie",
+            "adding_strategy": "Ajout Stratégie"
+        },
+        "strategy_execution": {
+            "trading_engine": "🤖 MOTEUR DE\nTRADING",
+            "analyzing_data": "📊 ANALYSE\nDONNÉES",
+            "requesting_strategy": "❓ DEMANDE\nSTRATÉGIE",
+            "receiving_strategy": "📋 REÇOIT\nSTRATÉGIE",
+            "decision_taking": "🎯 PRISE DE\nDÉCISION",
+            "placing_order": "📤 PLACE\nORDRE",
+            "order_sent": "✅ ORDRE\nENVOYÉ",
+            "oracle_market_data": "📊 ORACLE\n",
+            "strategy_rules_params": "📋 STRATÉGIE\n(Règles & Paramètres)",
+            "hyperliquid_trade_execution": "🏦 HYPERLIQUID\n(Exécution Trades)",
+            "hyperliquid_executing_trades": "⚡ HYPERLIQUID\n(Exécute Trades)",
+            "market_data": "Données Marché",
+            "request_strategy": "Demander Stratégie",
+            "strategy_rules": "Règles Stratégie",
+            "place_order": "Placer Ordre"
+        }
+    }
+}

@@ -1,0 +1,19 @@
+---
+title: Introduction
+description: Introduction to LiSA moves. Transform chat instructions into direct on-chain actions across supported networks.
+---
+
+### Chat interface
+- Say what you want in the chat
+- LiSA reads the intent, tokens, chains, amounts, etc. and discusses with you if information is missing.
+- LiSA transforms the intention into one or more transactions.
+
+### Complex requests
+- A request can chain multiple actions, for example swap then bridge
+- You can use % or parts for amounts ("send half of my USDC to Arbitrum, and the other half to Avalanche")
+- You can distribute across multiple chains or recipients in a single sentence
+
+### Quotes and signatures
+- Each transaction includes: route, fees, minimum received, time estimate, etc.
+- Nothing executes until you have signed the transaction
+- If an approval is needed, you sign it first, then you sign the action

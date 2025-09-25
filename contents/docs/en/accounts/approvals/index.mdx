@@ -1,0 +1,41 @@
+---
+title: Approvals
+description: Monitor and manage token allowances across contracts. View active approvals and revoke spending permissions.
+---
+
+### What are approvals?
+
+To interact with aggregators and liquidity pools, you must authorize contracts to spend your tokens. These allowances are necessary for:
+- Bridge funds between chains via LiFi contracts
+- Swap on DEXs via 1inch, Uniswap, etc.
+- Any interaction with DeFi protocols
+
+### Approval security
+
+Allowances should not remain open indefinitely for security reasons:
+- They give permanent access to your tokens
+- A compromised contract could use your old approvals
+- Regularly cleaning up reduces your attack surface
+
+### View your approvals
+
+- See the spender, token, chain, and approved amount
+- Check the age and last use of each approval
+- Filter by chain or protocol for a targeted overview
+
+### Revoke approvals
+
+**From the interface**:
+- Revoke directly from the active approvals list
+- Select one or multiple approvals to remove
+
+**Via chat**:
+- Ask LiSA to list your active approvals
+- Ask LiSA to execute the Revoke move to remove them
+- Exact amount approvals are supported when possible
+
+### Recommended management
+
+- Revoke approvals after use on unknown protocols
+- Keep active only approvals from protocols you use regularly
+- Periodically check your approvals to maintain good security hygiene
