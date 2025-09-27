@@ -74,7 +74,7 @@ export default async function BlogIndexPage({ params }: LangProps) {
   );
   return (
     <div className="w-full mx-auto flex flex-col gap-1 pt-2">
-      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-8 gap-4 mb-5">
+      <div className="blog-cards-container mb-5">
         {blogs.map((blog) => (
           <BlogCard {...blog} slug={blog.slug} key={blog.slug} dict={dict} />
         ))}

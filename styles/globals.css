@@ -181,12 +181,21 @@ pre > code {
 }
 
 
+/* Blog cards container - same approach as lab page */
+.blog-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+}
+
 .blog-card-hover {
-  max-width: 320px; 
-  margin-left: auto;
-  margin-right: auto;
+  width: 280px; 
+  margin: 0;
   aspect-ratio: 2/3; 
   transition: all 0.3s ease; 
+  flex-shrink: 0;
 }
 
 .blog-card-hover:hover {
@@ -205,6 +214,40 @@ pre > code {
     box-shadow: 
       0 0 16px var(--lisa-green-subtle), 
       0 0 32px var(--lisa-green-glow); 
+  }
+}
+
+/* Responsive blog cards - same breakpoints as lab page */
+@media (max-width: 768px) {
+  .blog-cards-container {
+    gap: 16px;
+  }
+  
+  .blog-card-hover {
+    width: calc(100vw - 24px);
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-cards-container {
+    gap: 12px;
+  }
+  
+  .blog-card-hover {
+    width: calc(100vw - 32px);
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 320px) {
+  .blog-cards-container {
+    gap: 10px;
+  }
+  
+  .blog-card-hover {
+    width: calc(100vw - 24px);
+    max-width: 280px;
   }
 }
 

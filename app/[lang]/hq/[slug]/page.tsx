@@ -220,9 +220,6 @@ function Authors({ authors }: { authors: Author[] }) {
             </Avatar>
             <div className="">
               <p className="text-sm font-medium">{author.username}</p>
-              <p className="font-code text-[13px] text-muted-foreground">
-                @{author.handle}
-              </p>
             </div>
           </Link>
         );

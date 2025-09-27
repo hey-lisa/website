@@ -12,11 +12,11 @@ import { usePathname, useRouter } from "next/navigation";
 
 const available_locales = [
   {
-    title: "English",
+    title: "🇺🇸 English",
     code: "en",
   },
   {
-    title: "Français",
+    title: "🇫🇷 Français",
     code: "fr",
   },
 ];
