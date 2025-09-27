@@ -8,7 +8,7 @@ export default async function Home({ params }: LangProps) {
   const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
   const dict = await getDictionary(validLang);
   return (
-    <div className="flex flex-col items-center justify-center text-center px-2">
+    <div className="flex flex-col items-center justify-center text-center px-2 flex-grow min-h-0">
       <h1 className="text-xl font-semibold mb-8 sm:text-2xl text-foreground">
         {dict.home.main_header}
       </h1>

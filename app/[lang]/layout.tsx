@@ -110,13 +110,14 @@ export default async function RootLayout({
     <html lang={validLang} suppressHydrationWarning>
       <body
         className={`${sansFont.variable} ${monoFont.variable} font-regular antialiased tracking-wide min-h-screen flex flex-col`}
+        style={{ minHeight: '100dvh' }}
         suppressHydrationWarning
       >
         <OrganizationStructuredData />
         <WebsiteStructuredData lang={lang} />
         <ClientDictionary dict={dict}>
           <Navbar dict={dict} />
-          <main className="sm:container mx-auto w-[90vw] h-auto scroll-smooth flex-grow">
+          <main className="sm:container mx-auto w-[90vw] h-auto scroll-smooth flex-grow flex flex-col">
             {children}
           </main>
           <Footer dict={dict} />
