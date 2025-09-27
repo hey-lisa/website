@@ -13,7 +13,9 @@ export async function generateMetadata({
   params,
 }: LabPageProps): Promise<Metadata> {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   return {
     title: dict.lab.title,
     description: dict.lab.description,
@@ -22,7 +24,9 @@ export async function generateMetadata({
 
 export default async function LabPage({ params }: LabPageProps) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   
   return <LabClient dict={dict} />;
 }

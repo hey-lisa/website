@@ -2,12 +2,15 @@ import { NextRequest, NextResponse } from "next/server";
 import { getLocale, pathnameHasLocale } from "./lib/locale";
 
 export function middleware(request: NextRequest) {
-    // Check if there is any supported locale in the pathname
     const { pathname } = request.nextUrl;
     
-    // Skip static files (images, favicon, etc.)
+    // Skip system paths and static files
     if (
-        pathname.includes('.')  // has file extension
+        pathname.startsWith('/.well-known') ||
+        pathname.startsWith('/_next') ||
+        pathname.startsWith('/api') ||
+        pathname.includes('.') || // Any file extension
+        pathname === '/favicon.ico'
     ) {
         return;
     }
@@ -25,7 +28,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
     matcher: [
-        // Skip all internal paths (_next) and static files (images, etc.)
-        "/((?!_next|favicon\\.ico|.*\\.(?:png|jpg|jpeg|gif|webp|svg|css|js)).*)",
+        // Only run on actual page routes, exclude everything else
+        "/((?!api|_next/static|_next/image|favicon.ico|\\.well-known).*)",
     ],
 };

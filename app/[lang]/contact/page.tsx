@@ -9,7 +9,9 @@ type PageProps = {} & LangProps;
 export default async function ContactPage(props: PageProps) {
   const params = await props.params;
   const { lang } = params;
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   
   // Load PGP key from public directory
   let pgpKey = "";

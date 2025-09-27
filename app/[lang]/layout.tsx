@@ -7,6 +7,7 @@ import { ClientDictionary } from "@/components/contexts/dictionary-provider";
 import { locales } from "@/lib/locale";
 import { OrganizationStructuredData, WebsiteStructuredData } from "@/components/seo/structured-data";
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { redirect } from "next/navigation";
 import "@/styles/globals.css";
 
 const sansFont = Space_Grotesk({
@@ -25,7 +26,9 @@ const monoFont = Space_Mono({
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const dict = await getDictionary(lang as "en" | "fr");
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   const baseUrl = "https://hey-lisa.com";
   
   return {
@@ -95,9 +98,17 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>;
 }>) {
   const { lang } = await params;
-  const dict = await getDictionary(lang as "en" | "fr");
+  
+  // Validate locale and fallback to English for invalid values
+  let validLang: "en" | "fr" = "en";
+  
+  if (lang && typeof lang === 'string' && !lang.includes('.') && !lang.includes('-') && /^[a-z]{2}$/.test(lang)) {
+    validLang = (lang === "en" || lang === "fr") ? lang : "en";
+  }
+  
+  const dict = await getDictionary(validLang);
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={validLang} suppressHydrationWarning>
       <body
         className={`${sansFont.variable} ${monoFont.variable} font-regular antialiased tracking-wide min-h-screen flex flex-col`}
         suppressHydrationWarning

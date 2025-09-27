@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       // Add external image domains here if needed
     ],
+    qualities: [50, 75, 80, 85, 90, 95, 100],
   },
   
   // Security headers applied to all routes

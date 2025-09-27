@@ -8,7 +8,13 @@ const dictionaries = {
   fr: () => import("@/dictionaries/fr.json").then((module) => module.default),
 };
 
-const getDictionaryUncached = async (locale: Locale) => dictionaries[locale]();
+const getDictionaryUncached = async (locale: Locale) => {
+  const dictionary = dictionaries[locale];
+  if (!dictionary || typeof dictionary !== 'function') {
+    return dictionaries.en();
+  }
+  return dictionary();
+};
 
 export const getDictionary = cache(getDictionaryUncached);
 

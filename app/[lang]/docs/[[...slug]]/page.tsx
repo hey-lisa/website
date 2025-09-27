@@ -19,7 +19,9 @@ export default async function DocsPage(props: PageProps) {
 
   const { slug = [], lang } = params;
   const slugWithLang = [lang, ...slug];
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   const pathName = slugWithLang.join("/");
   const res = await getDocsForSlug(pathName);
 

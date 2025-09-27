@@ -109,7 +109,9 @@ export default async function BlogPage(props: PageProps) {
   const { slug, lang } = params;
 
   const res = await getBlogForSlug(slug, lang as "en" | "fr");
-  const dict = await getDictionary(lang as "en" | "fr");
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
 
   if (!res) notFound();
   

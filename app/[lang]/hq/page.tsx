@@ -8,7 +8,9 @@ import Image from "next/image";
 
 export async function generateMetadata({ params }: LangProps): Promise<Metadata> {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   const baseUrl = "https://hey-lisa.com";
   const canonicalUrl = `${baseUrl}/${lang}/hq`;
   
@@ -68,7 +70,9 @@ export async function generateMetadata({ params }: LangProps): Promise<Metadata>
 
 export default async function BlogIndexPage({ params }: LangProps) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   const blogs = (await getAllBlogs(lang)).sort(
     (a, b) => stringToDate(b.date).getTime() - stringToDate(a.date).getTime()
   );

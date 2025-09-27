@@ -4,9 +4,11 @@ import { page_routes } from "@/lib/routes-config";
 
 export default async function Home({ params }: LangProps) {
   const { lang } = await params;
-  const dict = await getDictionary(lang);
+  // Validate locale
+  const validLang = (lang === "en" || lang === "fr") && !lang.includes('.') ? lang : "en";
+  const dict = await getDictionary(validLang);
   return (
-    <div className="flex flex-col items-center justify-center text-center px-2 min-h-[calc(100vh-8rem)] sm:min-h-[70vh]">
+    <div className="flex flex-col items-center justify-center text-center px-2">
       <h1 className="text-xl font-semibold mb-8 sm:text-2xl text-foreground">
         {dict.home.main_header}
       </h1>
