@@ -7,7 +7,6 @@ import { ClientDictionary } from "@/components/contexts/dictionary-provider";
 import { locales } from "@/lib/locale";
 import { OrganizationStructuredData, WebsiteStructuredData } from "@/components/seo/structured-data";
 import { GoogleAnalytics } from '@next/third-parties/google';
-import { redirect } from "next/navigation";
 import "@/styles/globals.css";
 
 const sansFont = Space_Grotesk({
